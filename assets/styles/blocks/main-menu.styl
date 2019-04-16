@@ -1,3 +1,26 @@
 .main-menu
+    width: calc(100% - 250px);
     display: flex;
-    align-items: center;
+    justify-content: center;
+
+    &__container
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: rel-size(700px);
+        width: 100%;
+
+    &__item
+
+    &__link
+        font-family: Comfortaa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rel-size(16px);
+        line-height: normal;
+        color: #BCBCBC;
+        transition: .3s;
+
+        &.is-active
+        &:hover
+            color: #3A3A3A;

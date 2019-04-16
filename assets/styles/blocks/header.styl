@@ -3,4 +3,44 @@ header
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #eee;
+    background: white;
+    height: rel-size(100px);
+
+.logo
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 800;
+    font-size: rel-size(16px);
+    line-height: rel-size(23px);
+    color: #FF1D1D;
+    width: 125px;
+
+.header-buttons
+    display: flex;
+    align-items: flex-end;
+    width: 125px;
+
+    &__search
+    &__cart
+        cursor: pointer;
+        width: rel-size(35px);
+        height: @width;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img
+            max-width: 100%;
+            height: auto;
+            width: rel-size(35px);
+            height: @width;
+
+    &__cart
+        width: rel-size(40px);
+        height: @width;
+        margin-left: rel-size(80px);
+
+        img
+            width: rel-size(40px);
+            height: @width;

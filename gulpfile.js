@@ -7,7 +7,6 @@ const uglify = require('gulp-uglify'); // minify JS
 const rename = require('gulp-rename'); // rename files
 const concat = require('gulp-concat'); // склеивает файлы в один
 const clear = require('gulp-clean'); // clean directory
-const del = require('del'); // clean directory
 const stream = require('gulp-watch'); // file watcher
 const order = require('gulp-order'); // упорядочивает поток файлов
 const imagemin = require('gulp-imagemin'); // minify images
@@ -44,7 +43,7 @@ var path = {
 // BrowserSync
 function bsReload() {
     browserSync.init({
-        proxy: 'boilerplate/'
+        proxy: 'autoparts/'
     });
 }
 
@@ -96,7 +95,7 @@ function watchFiles() {
     gulp.watch(path.src.styles, gulp.series(cleanCss, css));
     gulp.watch(path.src.js, gulp.series(cleanJs, js));
     gulp.watch(path.src.img, imageCompress);
-    gulp.watch('./**/*', browserSyncReload );
+    gulp.watch('./**/*.php', browserSyncReload );
 }
 
 // Image optimize
@@ -123,4 +122,5 @@ exports.css = css;
 exports.cleanCss = cleanCss;
 exports.js = js;
 exports.cleanJs = cleanJs;
+exports.browserSyncReload = browserSyncReload;
 exports.default = gulp.series(build, gulp.parallel(bsReload, watchFiles));

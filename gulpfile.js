@@ -7,7 +7,6 @@ const uglify = require('gulp-uglify'); // minify JS
 const rename = require('gulp-rename'); // rename files
 const concat = require('gulp-concat'); // склеивает файлы в один
 const clear = require('gulp-clean'); // clean directory
-const stream = require('gulp-watch'); // file watcher
 const order = require('gulp-order'); // упорядочивает поток файлов
 const imagemin = require('gulp-imagemin'); // minify images
 const pngquant = require('imagemin-pngquant');
@@ -27,6 +26,7 @@ var path = {
       styles: './assets/styles/**/*.styl',
       js: './assets/scripts/modules/**/*.js',
       img: './media/dev/**/*.{png,jpg,jpeg,svg}',
+      php: './**/*.php',
       clear: './assets/build/*'
     },
 
@@ -43,13 +43,14 @@ var path = {
 // BrowserSync
 function bsReload() {
     browserSync.init({
-        proxy: 'autoparts/'
+        proxy: 'boilerplate/'
     });
 }
 
 // BrowserSync Reload
-function browserSyncReload() {
+function browserSyncReload(cb) {
     browserSync.reload();
+    cb();
 }
 
 // CSS
@@ -64,10 +65,6 @@ function css() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.dest.styles))
     .pipe(browserSync.stream());
-}
-function cleanCss() {
-    return gulp.src('./assets/build/main.min.css')
-    .pipe(clear());
 }
 
 // JS
@@ -85,17 +82,13 @@ function js() {
 	.pipe(gulp.dest(path.dest.js))
 	.pipe(browserSync.stream());
 }
-function cleanJs() {
-    return gulp.src('./assets/build/main.min.js')
-    .pipe(clear());
-}
 
 // Watch files
 function watchFiles() {
-    gulp.watch(path.src.styles, gulp.series(cleanCss, css));
-    gulp.watch(path.src.js, gulp.series(cleanJs, js));
+    gulp.watch(path.src.styles, css);
+    gulp.watch(path.src.js, js);
     gulp.watch(path.src.img, imageCompress);
-    gulp.watch('./**/*.php', browserSyncReload );
+    gulp.watch(path.src.php, browserSyncReload);
 }
 
 // Image optimize
@@ -113,14 +106,18 @@ function imageCompress() {
     .pipe(gulp.dest(path.dest.img));
 }
 
+// Clean
+function clean() {
+    return gulp.src(path.src.clear)
+      .pipe(clear());
+}
+
 let build = gulp.parallel(js, css);
 
 exports.imageCompress = imageCompress;
 exports.build = build;
 exports.watch = watchFiles;
 exports.css = css;
-exports.cleanCss = cleanCss;
 exports.js = js;
-exports.cleanJs = cleanJs;
-exports.browserSyncReload = browserSyncReload;
-exports.default = gulp.series(build, gulp.parallel(bsReload, watchFiles));
+exports.clean = clean;
+exports.default = gulp.series(clean, build, gulp.parallel(bsReload, watchFiles));

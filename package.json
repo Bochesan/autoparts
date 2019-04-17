@@ -37,7 +37,6 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-pngquant": "^7.0.0",
     "rupture": "^0.7.1"

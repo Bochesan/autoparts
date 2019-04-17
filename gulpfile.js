@@ -43,7 +43,7 @@ var path = {
 // BrowserSync
 function bsReload() {
     browserSync.init({
-        proxy: 'boilerplate/'
+        proxy: 'autoparts/'
     });
 }
 

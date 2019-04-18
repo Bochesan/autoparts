@@ -1,0 +1,101 @@
+.head-banner
+    min-height: calc(100vh - 8.25rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__parallax
+        position: absolute;
+        max-width: 90%;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        background: #F9F9F9;
+        left: 5%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img
+            max-width: 75%;
+            max-height: 75%;
+
+    &__parallax-container
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        transform: translate(-50%,-50%);
+
+    &__parallax-scene img
+        max-width: 100%;
+        max-height: 100%;
+
+    &__nav
+        position: absolute;
+        bottom: rel-size(60px);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    &__nav-button
+        padding: rel-size(20px) rel-size(10px);
+        background: white;
+        display: flex;
+        align-items: center;
+        width: rel-size(350px);
+        position: relative;
+
+        &--prev
+            flex-direction: row-reverse;
+
+            .head-banner__nav-button-arrow
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: rotate(180deg) translate(0,50%);
+
+        &--next
+
+            .head-banner__nav-button-arrow
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0,-50%);
+
+    &__nav-button-image
+        width: rel-size(100px);
+        height: rel-size(60px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 rel-size(10px);
+
+        img
+            max-width: 100%;
+            max-height: 100%;
+
+    &__title
+        position: relative;
+        z-index: 100;
+        font-family: Montserrat;
+        font-style: italic;
+        font-weight: bold;
+        font-size: rel-size(120px);
+        line-height: rel-size(132px);
+        color: #3A3A3A;
+        margin: 0;
+
+        &:before
+            content: attr(data-name);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(-4%,9%);
+            color: white;
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000;
+            z-index: -1;

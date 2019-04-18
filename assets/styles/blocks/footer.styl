@@ -1,6 +1,57 @@
-footer
+.footer
     flex: 0 0 auto;
     background: darkbg;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: rel-size(80px);
+
+    &__container
+        display: flex;
+        justify-content: space-between;
+
+    &__col
+        width: 20%;
+        padding-right: rel-size(25px);
+
+        .info-line__information
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: rel-size(16px);
+            line-height: rel-size(25px);
+            color: #ACACAC;
+            text-align: left;
+            width: 100%;
+            margin-bottom: rel-size(20px);
+
+    &__col-title
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rel-size(16px);
+        line-height: rel-size(18px);
+        color: white;
+        margin-bottom: rel-size(20px);
+        display: block;
+        min-height: rel-size(40px);
+
+        &:hover
+            text-decoration: underline;
+
+    &__col-item
+        padding: 0;
+
+        &:before
+            display: none;
+
+    &__col-link
+        font-family: Comfortaa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rel-size(16px);
+        line-height: normal;
+        color: #ACACAC;
+
+        &:hover
+            text-decoration: underline;
+
+.logo--footer
+    color: white;

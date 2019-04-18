@@ -58,7 +58,7 @@ function css() {
     return gulp.src(path.src.common)
     .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(stylus())
+    .pipe(stylus({use:[rupture()]}))
     .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 11', 'Android >= 4.1', 'Safari >= 8', 'iOS >= 8']}))
     .pipe(csso())
     .pipe(rename('main.min.css'))

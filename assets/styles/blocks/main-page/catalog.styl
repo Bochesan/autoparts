@@ -1,0 +1,86 @@
+.catalog
+    padding: rel-size(80px) 0;
+
+.catalog-nav
+
+    &__title
+        font-family: Comfortaa, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rel-size(24px);
+        line-height: normal;
+        color: #BCBCBC;
+        margin-bottom: rel-size(40px);
+
+    &__controls
+        position: relative;
+        background: #F9F9F9;
+        border-radius: 50px;
+        display: inline-block;
+
+    &__controls-list
+        display: inline-flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+
+    &__controls-item
+        padding: 0;
+        margin: 0;
+        position: static;
+        display: inline-block;
+
+        &:before
+            display: none;
+
+    &__controls-link
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        white-space: normal;
+        padding: rel-size(5px) rel-size(15px);
+        min-width: rel-size(260px);
+        min-height: rel-size(80px);
+        border-radius: 50px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rel-size(24px);
+        line-height: rel-size(26px);
+        text-align: center;
+        color: #3A3A3A;
+        transition: background .3s;
+        position: relative;
+        z-index: 10;
+
+        &.is-active
+            background: #FF1D1D;
+            color: #FFFFFF;
+
+    &__hover
+        position: absolute;
+        background: lighten(#FF1D1D,85%);
+        transition: left 0.5s, top 0.5s, width 0.5s, height 0.5s;
+        border-radius: 50px;
+
+.full-size .catalog-nav
+
+    &__controls-item
+        width: 16.66%;
+
+        +below(1300px)
+            width: 20%;
+
+        +below(820px)
+            width: 25%;
+
+        +below(680px)
+            width: 33.33%;
+
+        +below(480px)
+            width: 50%;
+
+    &__controls-link
+        min-width: initial;
+        width: 100%;

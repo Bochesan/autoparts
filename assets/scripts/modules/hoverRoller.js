@@ -3,11 +3,7 @@
     window.addEventListener('load', function() {
 
         var menuLink = $('.catalog-nav__controls-link'),
-            menu = $('.catalog-nav__controls-list'),
-
-        if (menuLink.length >= 8) {
-            menu.addClass('full-size');
-        }
+            menu = $('.catalog-nav__controls-list');
 
         var menuItem = $('.catalog-nav__controls-item'),
             activeLink = $('.catalog-nav__controls-link.is-active'),
@@ -16,8 +12,6 @@
             activeLinkPosTop = activeLink.position().top,
             activeLinkWidth = activeLink.innerWidth(),
             activeLinkHeight = activeLink.innerHeight();
-
-        hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : activeLinkWidth, 'height' : activeLinkHeight});
 
         var check = false;
         menuLink.hover(
@@ -39,15 +33,36 @@
           }
         );
 
-        $(window).resize(function() {
+        function resizePos() {
             activeLinkPosLeft = activeLink.position().left,
             activeLinkPosTop = activeLink.position().top,
             activeLinkWidth = activeLink.innerWidth(),
             activeLinkHeight = activeLink.innerHeight();
 
             hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : activeLinkWidth, 'height' : activeLinkHeight});
-        });
+        }
 
+        var widthAllButtons = 0,
+            menuWidth = $(window).width() - menu.width();
+        menuItem.each(function() {
+            widthAllButtons += $(this).width();
+        });
+        function widthContainer() {
+
+            if (menu.width() < widthAllButtons) {
+                menu.addClass('full-size');
+            }
+            if ($(window).width() - menuWidth > widthAllButtons) {
+                menu.removeClass('full-size');
+            }
+        }
+
+        $(window).resize(function() {
+            widthContainer();
+            resizePos();
+        });
+        widthContainer();
+        resizePos();
     });
 
 

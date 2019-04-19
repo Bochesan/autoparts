@@ -1,0 +1,44 @@
+.button
+    min-width: rel-size(200px);
+    min-height: rel-size(60px);
+    padding: rel-size(5px) rel-size(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rel-size(18px);
+    line-height: rel-size(22px);
+    text-align: center;
+    background: #FF1D1D;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+
+    &--red
+        box-shadow: 0 5px 15px rgba(#FF1D1D, 0.5);
+
+        &:hover
+            transform: scale(1.035);
+            box-shadow: 0 5px 20px rgba(#FF1D1D, 0.4);
+
+        &:active
+            transform: scale(1);
+            box-shadow: 0 5px 15px rgba(#FF1D1D, 0.5);
+
+    &--white
+        background: white;
+        color: #FF1D1D;
+        border: 1px solid #FF1D1D;
+
+        &:hover
+            transform: scale(1.035);
+            box-shadow: 0 5px 15px rgba(#FF1D1D, 0.3);
+
+        &:active
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(#FF1D1D, 0);

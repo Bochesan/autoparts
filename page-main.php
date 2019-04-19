@@ -3,15 +3,10 @@
 <div class="head-banner">
     <div class="head-banner__content">
         <div class="head-banner__parallax">
-            <!-- <img src="/media/images/oil-bg.jpg" alt=""> -->
-            <!-- <div class="head-banner__parallax-container">
-                <div id="scene" class="head-banner__parallax-scene">
-                    <img id="scene1" src="/media/images/oil.png" alt="Oil" data-depth="0.1">
-                    <img id="scene2" src="/media/images/oil-sm.png" alt="Oil" data-depth="0.3">
-                </div>
-            </div> -->
-            <img class="head-banner__parallax--static-image" src="/media/images/oil.png" alt="Oil">
-            <img class="head-banner__parallax--parallax-image" src="/media/images/oil-sm.png" alt="Oil">
+            <ul id="scene" class="head-banner__parallax-scene">
+                <li class="head-banner__parallax-layer" data-depth="0.10"><img src="/media/images/oil.png" alt=""></li>
+                <li class="head-banner__parallax-layer head-banner__parallax-layer--small" data-depth="0.50"><img src="/media/images/oil-sm.png" alt=""></li>
+            </ul>
         </div>
         <div class="head-banner__title">
             <h1 class="double-text" data-name="Моторные масла">Моторные<br> масла</h1>
@@ -58,8 +53,8 @@
             <div class="catalog-filter__col catalog-filter__col-1">Название</div>
             <div class="catalog-filter__col catalog-filter__col-2">Литраж</div>
             <div class="catalog-filter__col catalog-filter__col-3 is-active">Цена</div>
+            <div class="catalog-filter__col catalog-filter__col-4"></div>
         </div>
-
     </div>
     <div class="catalog__container">
         <div class="catalog__product">

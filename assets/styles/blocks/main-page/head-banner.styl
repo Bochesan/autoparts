@@ -2,8 +2,17 @@
 
     &__content
         height: calc(100vh - 8.25rem);
+        min-height: rel-size(650px);
         position: relative;
 
+        +below(1180px)
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        +below(680px)
+            min-height: initial;
+            height: calc(100vh - 11rem);
 
     &__parallax
         position: absolute;
@@ -18,30 +27,34 @@
         justify-content: center;
         align-items: center;
 
-        > img
-            max-width: 75%;
-            max-height: 75%;
-
     &__parallax--parallax-image
         position: absolute;
         top: 10%;
         left: 30%;
 
+    &__parallax-scene
+        padding: 0;
+        margin: 0;
 
+    &__parallax-layer
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
 
-    // &__parallax-container
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     max-width: 100%;
-    //     max-height: 100%;
-    //     transform: translate(-50%,-50%);
+        & > img
+            width: 80vmin;
+            height: auto;
 
-    // &__parallax-scene
-    //
-    //     img
-    //         max-width: 100%;
-    //         max-height: 100%;
+        &:before
+            display: none;
+
+        &--small
+
+            & > img
+                width: 80vmin;
+                height: auto;
 
     &__nav
         position: absolute;
@@ -51,6 +64,9 @@
         display: flex;
         justify-content: space-between;
 
+        +below(1180px)
+            position: static;
+
     &__nav-button
         padding: rel-size(20px) rel-size(10px);
         background: white;
@@ -58,6 +74,9 @@
         align-items: center;
         width: rel-size(350px);
         position: relative;
+
+        +below(768px)
+            width: 40%;
 
         &--prev
             flex-direction: row-reverse;
@@ -93,6 +112,9 @@
         align-items: center;
         height: 100%;
 
+        +below(1180px)
+            height: initial;
+
         h1
             position: relative;
             z-index: 100;
@@ -103,6 +125,14 @@
             line-height: rel-size(132px);
             color: #3A3A3A;
             margin: 0;
+            margin-bottom: rel-size(250px);
+
+            +below(1180px)
+                margin: 0;
+
+            +below(680px)
+                line-height: initial;
+                font-size: 15vmin;
 
 .double-text
     position: relative;

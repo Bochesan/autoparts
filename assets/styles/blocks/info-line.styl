@@ -7,6 +7,11 @@
     align-items: center;
     position: relative;
 
+    +below(680px)
+        height: initial;
+        padding: rel-size(10px) 4%;
+        flex-direction: column;
+
     &__information
         width: 33.3%;
         color: white;
@@ -16,11 +21,28 @@
         font-size: rel-size(16px);
         line-height: rel-size(25px);
 
+        +below(680px)
+            width: 100%;
+            margin-bottom: rel-size(10px);
+
+            &:last-child
+                margin-bottom: 0;
+
+        &--address
+            +below(680px)
+                text-align: center;
+
         &--work-time
             text-align: center;
 
+            +below(680px)
+                text-align: center;
+
         &--phone
             text-align: right;
+
+            +below(680px)
+                text-align: center;
 
             a:hover
                 text-decoration: underline;

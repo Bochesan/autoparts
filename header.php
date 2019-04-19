@@ -25,6 +25,13 @@ $buildDest = "/assets/build/";
             </div>
         </div>
         <div class="header wrapper">
+            <div id='menu-button' class='menu-button'>
+                <div class="menu-button__inner">
+                    <div class="menu-button__line menu-button__line--1"></div>
+                    <div class="menu-button__line menu-button__line--2"></div>
+                    <div class="menu-button__line menu-button__line--3"></div>
+                </div>
+            </div>
             <div class="logo">
                 <a href="/">Автозапчасти<br> в Звенигороде</a>
             </div>

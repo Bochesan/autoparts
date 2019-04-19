@@ -3,13 +3,15 @@
 <div class="head-banner">
     <div class="head-banner__content">
         <div class="head-banner__parallax">
-            <img src="/media/images/oil-bg.jpg" alt="">
-            <div class="head-banner__parallax-container">
+            <!-- <img src="/media/images/oil-bg.jpg" alt=""> -->
+            <!-- <div class="head-banner__parallax-container">
                 <div id="scene" class="head-banner__parallax-scene">
-                    <img src="/media/images/oil.png" alt="Oil" data-depth="0.1">
-                    <img src="/media/images/oil-sm.png" alt="Oil" data-depth="0.3">
+                    <img id="scene1" src="/media/images/oil.png" alt="Oil" data-depth="0.1">
+                    <img id="scene2" src="/media/images/oil-sm.png" alt="Oil" data-depth="0.3">
                 </div>
-            </div>
+            </div> -->
+            <img class="head-banner__parallax--static-image" src="/media/images/oil.png" alt="Oil">
+            <img class="head-banner__parallax--parallax-image" src="/media/images/oil-sm.png" alt="Oil">
         </div>
         <div class="head-banner__title">
             <h1 class="double-text" data-name="Моторные масла">Моторные<br> масла</h1>

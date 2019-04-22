@@ -16,15 +16,18 @@
             color: #3A3A3A;
 
     &__col-1
-        width: rel-size(300px);
+        width: calc(100% - 45rem);
+
+        +below(1520px)
+            width: calc(100% - 37rem);
 
     &__col-2
-        width: rel-size(150px);
+        width: 7.5rem;
         text-align: center;
 
     &__col-3
-        width: rel-size(150px);
+        width: 7.5rem;
         text-align: center;
 
     &__col-4
-        width: rel-size(470px);
+        width: 22rem;

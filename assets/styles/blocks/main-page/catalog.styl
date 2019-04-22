@@ -39,6 +39,8 @@
         margin: 0;
         position: static;
         display: inline-block;
+        width: rel-size(260px);
+        min-height: rel-size(80px);
 
         &:before
             display: none;
@@ -49,9 +51,9 @@
         align-items: center;
         flex-wrap: wrap;
         white-space: normal;
-        padding: rel-size(5px) rel-size(15px);
-        min-width: rel-size(260px);
-        min-height: rel-size(80px);
+        padding: rel-size(5px) rel-size(20px);
+        width: 100%;
+        height: 100%;
         border-radius: 50px;
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -75,6 +77,9 @@
         border-radius: 50px;
 
 .full-size .catalog-nav
+
+    &__controls
+        width: 100%;
 
     &__controls-item
         width: 20%;

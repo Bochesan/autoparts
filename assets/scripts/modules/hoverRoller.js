@@ -42,26 +42,9 @@
             hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : activeLinkWidth, 'height' : activeLinkHeight});
         }
 
-        var widthAllButtons = 0,
-            menuWidth = $(window).width() - menu.width();
-        menuItem.each(function() {
-            widthAllButtons += $(this).width();
-        });
-        function widthContainer() {
-
-            if (menu.width() < widthAllButtons) {
-                menu.addClass('full-size');
-            }
-            if ($(window).width() - menuWidth > widthAllButtons) {
-                menu.removeClass('full-size');
-            }
-        }
-
         $(window).resize(function() {
-            widthContainer();
             resizePos();
         });
-        widthContainer();
         resizePos();
     });
 

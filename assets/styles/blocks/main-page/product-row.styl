@@ -7,15 +7,53 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
     &__title
+        display: flex;
+        align-items: center;
+        width: calc(100% - 45rem);
+        padding-right: rel-size(20px);
+
+        +below(1520px)
+            width: calc(100% - 37rem);
+
+        +below(1240px)
+            width: calc(100% - 21.5rem);
+
+        +below(768px)
+            width: 100%;
+            margin-bottom: 10px;
+            padding-right: 0;
+            flex-direction: column;
+            align-items: center;
+
+    &__title-image
+        width: 60px;
+        height: @width;
+        margin-right: rel-size(15px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        +below(768px)
+            margin-right: 0;
+            margin-bottom: rel-size(30px);
+
+        & img
+            max-width: 100%;
+            max-height: 100%;
+
+    &__title-name
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: rel-size(20px);
         line-height: rel-size(22px);
         color: #3A3A3A;
-        width: rel-size(300px);
+
+        +below(768px)
+            margin-bottom: rel-size(30px);
 
     &__size
         font-family: Montserrat;
@@ -24,8 +62,20 @@
         font-size: rel-size(18px);
         line-height: rel-size(20px);
         color: #3A3A3A;
-        width: rel-size(150px);
+        width: 7.5rem;
         text-align: center;
+
+        +below(1240px)
+            width: 10rem;
+            margin-right: 1.5rem;
+
+        +below(768px)
+            width: 50%;
+            margin-right: 0;
+            margin-bottom: rel-size(30px);
+
+        +below(480px)
+            width: 100%;
 
     &__prise
         font-family: Montserrat, sans-serif;
@@ -34,16 +84,41 @@
         font-size: rel-size(20px);
         line-height: rel-size(22px);
         color: #3A3A3A;
-        width: rel-size(150px);
+        width: 7.5rem;
         text-align: center;
+
+        +below(1240px)
+            width: 10rem;
+
+        +below(768px)
+            width: 50%;
+            margin-bottom: rel-size(30px);
+
+        +below(480px)
+            width: 100%;
 
     &__buttons
         display: flex;
         align-items: center;
-        width: rel-size(470px);
+        width: 22rem;
+
+        +below(1240px)
+            width: 100%;
+            justify-content: flex-end;
+            margin-top: 10px;
+
+        +below(768px)
+            justify-content: space-around;
+
+        +below(480px)
+            flex-direction: column;
 
         .button
             margin-right: rel-size(30px);
+
+            +below(480px)
+                margin-right: 0;
+                margin-bottom: rel-size(30px);
 
             &:last-child
                 margin-right: 0;

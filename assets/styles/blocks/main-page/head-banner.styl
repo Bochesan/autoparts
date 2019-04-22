@@ -36,6 +36,10 @@
         padding: 0;
         margin: 0;
 
+        &--oil
+            background: url('/media/images/oil-bg.jpg') center center no-repeat;
+            background-size: contain;
+
     &__parallax-layer
         position: absolute;
         top: 0;
@@ -68,32 +72,47 @@
             position: static;
 
     &__nav-button
-        padding: rel-size(20px) rel-size(10px);
+        padding: rel-size(20px);
         background: white;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: rel-size(350px);
         position: relative;
+        transition: transform 0.3s, box-shadow 0.3s;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
 
         +below(768px)
             width: 40%;
+            flex-direction: column;
+
+        &-title
+            +below(768px)
+                        margin-bottom: rel-size(10px);
+
+        &:hover
+            transform: scale(1.025);
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
 
         &--prev
-            flex-direction: row-reverse;
+            //flex-direction: row-reverse;
+            +below(768px)
+                flex-direction: column-reverse;
 
             .head-banner__nav-button-arrow
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: rotate(180deg) translate(0,50%);
+                //position: absolute;
+                //top: 50%;
+                //left: 20px;
+                transform: rotate(180deg);
 
         &--next
 
             .head-banner__nav-button-arrow
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translate(0,-50%);
+                //position: absolute;
+                //top: 50%;
+                //right: 20px;
+                //transform: translate(0,-50%);
 
     &__nav-button-image
         width: rel-size(100px);
@@ -102,6 +121,9 @@
         justify-content: center;
         align-items: center;
         padding: 0 rel-size(10px);
+
+        +below(768px)
+            display: none;
 
         img
             max-width: 100%;

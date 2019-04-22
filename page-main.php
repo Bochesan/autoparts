@@ -3,7 +3,7 @@
 <div class="head-banner">
     <div class="head-banner__content">
         <div class="head-banner__parallax">
-            <ul id="scene" class="head-banner__parallax-scene">
+            <ul id="scene" class="head-banner__parallax-scene head-banner__parallax-scene--oil">
                 <li class="head-banner__parallax-layer" data-depth="0.10"><img src="/media/images/oil.png" alt=""></li>
                 <li class="head-banner__parallax-layer head-banner__parallax-layer--small" data-depth="0.50"><img src="/media/images/oil-sm.png" alt=""></li>
             </ul>
@@ -13,11 +13,11 @@
         </div>
         <div class="head-banner__nav">
             <a href="#" class="head-banner__nav-button head-banner__nav-button--prev">
+                <img src="/media/images/arrow.svg" alt="arrow" class="head-banner__nav-button-arrow">
+                <span class="head-banner__nav-button-title">Клеммы</span>
                 <div class="head-banner__nav-button-image">
                     <img src="/media/images/pic-1.png" alt="Клемы">
                 </div>
-                <span class="head-banner__nav-button-title">Клеммы</span>
-                <img src="/media/images/arrow.svg" alt="arrow" class="head-banner__nav-button-arrow">
             </a>
             <a href="#" class="head-banner__nav-button head-banner__nav-button--next">
                 <div class="head-banner__nav-button-image">
@@ -60,7 +60,12 @@
         <div class="catalog__product">
             <div class="product-row">
                 <div class="product-row__content">
-                    <div class="product-row__title">Helix HX8 A5/B5 5/30</div>
+                    <div class="product-row__title">
+                        <div class="product-row__title-image">
+                            <img src="/media/images/pic-2.png" alt="">
+                        </div>
+                        <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
+                    </div>
                     <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">
@@ -72,7 +77,12 @@
 
             <div class="product-row">
                 <div class="product-row__content">
-                    <div class="product-row__title">Helix HX8 A5/B5 5/30</div>
+                    <div class="product-row__title">
+                        <div class="product-row__title-image">
+                            <img src="/media/images/pic-2.png" alt="">
+                        </div>
+                        <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
+                    </div>
                     <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">

@@ -1,8 +1,12 @@
 .catalog-filter
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: rel-size(30px);
     padding: 0 rel-size(20px);
+
+    +below(768px)
+        margin-bottom: rel-size(10px);
 
     &__col
         font-family: Comfortaa, sans-serif;
@@ -21,13 +25,46 @@
         +below(1520px)
             width: calc(100% - 37rem);
 
+        +below(1240px)
+            width: calc(100% - 21.5rem);
+
+        +below(768px)
+            width: 100%;
+            text-align: left;
+            margin-bottom: rel-size(10px);
+
     &__col-2
         width: 7.5rem;
         text-align: center;
+
+        +below(1240px)
+            width: 10rem;
+            margin-right: 1.5rem;
+
+        +below(768px)
+            width: 100%;
+            text-align: left;
+            margin-right: 0;
+            margin-bottom: rel-size(10px);
 
     &__col-3
         width: 7.5rem;
         text-align: center;
 
+        +below(1240px)
+            width: 10rem;
+
+        +below(768px)
+            width: 100%;
+            text-align: left;
+            margin-bottom: rel-size(10px);
+
     &__col-4
         width: 22rem;
+        border: 1px solid red;
+
+        +below(1240px)
+            width: 100%;
+
+        +below(768px)
+            display: none;

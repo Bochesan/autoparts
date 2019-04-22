@@ -26,7 +26,7 @@
           function() {
             setTimeout(function(){
               if (check) {
-                hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : activeLinkWidth, 'height' : activeLinkHeight});
+                hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : 0, 'height' : 0});
               }
             }, 1000);
             check = true;
@@ -39,7 +39,7 @@
             activeLinkWidth = activeLink.innerWidth(),
             activeLinkHeight = activeLink.innerHeight();
 
-            hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : activeLinkWidth, 'height' : activeLinkHeight});
+            hoverBox.css({'left' : activeLinkPosLeft, 'top' : activeLinkPosTop, 'width' : 0, 'height' : 0});
         }
 
         $(window).resize(function() {

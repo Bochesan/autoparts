@@ -50,9 +50,9 @@
 
     <div class="catalog__filter">
         <div class="catalog-filter">
-            <div class="catalog-filter__col catalog-filter__col-1">Название</div>
-            <div class="catalog-filter__col catalog-filter__col-2">Литраж</div>
-            <div class="catalog-filter__col catalog-filter__col-3 is-active">Цена</div>
+            <div class="catalog-filter__col catalog-filter__col-1 is-active" data-filter="active" data-sort="">Название</div>
+            <div class="catalog-filter__col catalog-filter__col-2" data-filter="noactive" data-sort="">Литраж</div>
+            <div class="catalog-filter__col catalog-filter__col-3" data-filter="noactive" data-sort="">Цена</div>
             <div class="catalog-filter__col catalog-filter__col-4"></div>
         </div>
     </div>

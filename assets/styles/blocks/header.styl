@@ -61,9 +61,36 @@ header
         width: rel-size(40px);
         height: @width;
         margin-left: rel-size(80px);
+        position: relative;
 
         +below(1180px)
             margin: 0 rel-size(30px);
 
         +below(460px)
             margin: 0 rel-size(15px);
+
+        &--basket.is-active
+
+            & .basket-num
+                width: 30px;
+                height: @width;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px;
+                background: #FF1D1D;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-family: 'Comfortaa', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: rel-size(16px);
+                line-height: normal;
+                text-align: center;
+                color: #FFFFFF;
+                transform: translate(40%,-40%);
+
+.basket-num
+    display: none;

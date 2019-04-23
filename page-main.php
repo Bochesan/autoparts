@@ -50,10 +50,21 @@
 
     <div class="catalog__filter">
         <div class="catalog-filter">
-            <div class="catalog-filter__col catalog-filter__col-1 is-active" data-filter="active" data-sort="">Название</div>
-            <div class="catalog-filter__col catalog-filter__col-2" data-filter="noactive" data-sort="">Литраж</div>
-            <div class="catalog-filter__col catalog-filter__col-3" data-filter="noactive" data-sort="">Цена</div>
-            <div class="catalog-filter__col catalog-filter__col-4"></div>
+            <div class="catalog-filter__col catalog-filter__col-1" data-filter="active" data-sort="">
+                <span class="catalog-filter__col-btn is-active sort-up">Название</span>
+            </div>
+            <div class="catalog-filter__col catalog-filter__col-2" data-filter="noactive" data-sort="">
+                <span class="catalog-filter__col-btn is-active sort-down">Литраж</span>
+            </div>
+            <div class="catalog-filter__col catalog-filter__col-3" data-filter="noactive" data-sort="">
+                <span class="catalog-filter__col-btn">Цена</span>
+            </div>
+            <div class="catalog-filter__col catalog-filter__col-4">
+                <form class="catalog-filter__form" action="index.html" method="post">
+                    <input type="input" name="" value="">
+                    <input type="submit" name="" value="">
+                </form>
+            </div>
         </div>
     </div>
     <div class="catalog__container">
@@ -62,7 +73,7 @@
                 <div class="product-row__content">
                     <div class="product-row__title">
                         <div class="product-row__title-image">
-                            <img src="/media/images/pic-2.png" alt="">
+                            <img src="/media/images/oil.png" alt="">
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
@@ -79,7 +90,7 @@
                 <div class="product-row__content">
                     <div class="product-row__title">
                         <div class="product-row__title-image">
-                            <img src="/media/images/pic-2.png" alt="">
+                            <img src="/media/images/oil.png" alt="">
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>

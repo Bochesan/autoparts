@@ -44,11 +44,12 @@ $buildDest = "/assets/build/";
                 </ul>
             </nav>
             <div class="header-buttons">
-                <div class="header-buttons__search">
+                <!-- <div class="header-buttons__search">
                     <img src="/media/images/search.svg" alt="">
-                </div>
-                <div class="header-buttons__cart">
+                </div> -->
+                <div class="header-buttons__cart header-buttons__cart--basket is-active">
                     <img src="/media/images/cart.svg" alt="">
+                    <span class="basket-num">0</span>
                 </div>
             </div>
         </div>

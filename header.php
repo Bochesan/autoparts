@@ -37,10 +37,10 @@ $buildDest = "/assets/build/";
             </div>
             <nav class="main-menu">
                 <ul class="main-menu__container">
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Аккумуляторы</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Клеммы</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link is-active">Моторные масла</a></li>
-                    <li class="main-menu__item"><a href="#" class="main-menu__link">Автохимия</a></li>
+                    <li class="main-menu__item"><a href="/page-accum.php" class="main-menu__link">Аккумуляторы</a></li>
+                    <li class="main-menu__item"><a href="/page-clamp.php" class="main-menu__link">Клеммы</a></li>
+                    <li class="main-menu__item"><a href="/page-oil.php" class="main-menu__link is-active">Моторные масла</a></li>
+                    <li class="main-menu__item"><a href="/page-him.php" class="main-menu__link">Автохимия</a></li>
                 </ul>
             </nav>
             <div class="header-buttons">

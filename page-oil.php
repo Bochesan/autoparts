@@ -3,23 +3,25 @@
 <div class="head-banner">
     <div class="head-banner__content">
         <div class="head-banner__parallax">
-            <ul id="scene" class="head-banner__parallax-scene head-banner__parallax-scene--oil">
-                <li class="head-banner__parallax-layer" data-depth="0.10"><img src="/media/images/oil.png" alt=""></li>
-                <li class="head-banner__parallax-layer head-banner__parallax-layer--small" data-depth="0.50"><img src="/media/images/oil-sm.png" alt=""></li>
-            </ul>
+            <div class="head-banner__parallax-inner head-banner__parallax-inner--oil">
+                <ul id="scene" class="head-banner__parallax-scene">
+                    <li class="head-banner__parallax-layer" data-depth="0.10"><img src="/media/images/oil.png" alt=""></li>
+                    <li class="head-banner__parallax-layer head-banner__parallax-layer--small" data-depth="0.50"><img src="/media/images/oil-sm.png" alt=""></li>
+                </ul>
+            </div>
         </div>
         <div class="head-banner__title">
             <h1 class="double-text" data-name="Моторные масла">Моторные<br> масла</h1>
         </div>
         <div class="head-banner__nav">
-            <a href="#" class="head-banner__nav-button head-banner__nav-button--prev">
+            <a href="/page-clamp.php" class="head-banner__nav-button head-banner__nav-button--prev">
                 <img src="/media/images/arrow.svg" alt="arrow" class="head-banner__nav-button-arrow">
                 <span class="head-banner__nav-button-title">Клеммы</span>
                 <div class="head-banner__nav-button-image">
                     <img src="/media/images/pic-1.png" alt="Клемы">
                 </div>
             </a>
-            <a href="#" class="head-banner__nav-button head-banner__nav-button--next">
+            <a href="/page-him.php" class="head-banner__nav-button head-banner__nav-button--next">
                 <div class="head-banner__nav-button-image">
                     <img src="/media/images/pic-2.png" alt="Автохимия">
                 </div>

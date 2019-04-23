@@ -1,4 +1,4 @@
 <?
 header("HTTP/1.1 307 Temporary Redirect");
-header("Location: page-main.php");
+header("Location: page-oil.php");
 ?>

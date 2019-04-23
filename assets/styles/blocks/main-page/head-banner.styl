@@ -23,9 +23,30 @@
         background: #F9F9F9;
         left: 5%;
         top: 0;
+        width: 100%;
+
+    &__parallax-inner
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+
+        &--oil
+            background: url('/media/images/oil-bg.jpg') center center no-repeat;
+            background-size: contain;
+
+        &--clamp
+            background: url('/media/images/clamp-bg.png') center center no-repeat;
+            background-size: cover;
+
+        &--accum
+            background: url('/media/images/accum-bg.png') center center no-repeat;
+            background-size: cover;
+
+        &--him
+            background: url('/media/images/him-bg.png') center center no-repeat;
+            background-size: cover;
 
     &__parallax--parallax-image
         position: absolute;
@@ -36,10 +57,6 @@
         padding: 0;
         margin: 0;
 
-        &--oil
-            background: url('/media/images/oil-bg.jpg') center center no-repeat;
-            background-size: contain;
-
     &__parallax-layer
         position: absolute;
         top: 0;
@@ -48,7 +65,7 @@
         margin: 0;
 
         & > img
-            width: 80vmin;
+            max-width: 80vmin;
             height: auto;
 
         &:before
@@ -57,7 +74,7 @@
         &--small
 
             & > img
-                width: 80vmin;
+                max-width: 80vmin;
                 height: auto;
 
     &__nav
@@ -151,10 +168,8 @@
 
             +below(1180px)
                 margin: 0;
-
-            +below(680px)
                 line-height: initial;
-                font-size: 12vmin;
+                font-size: 10vmin;
 
 .double-text
     position: relative;

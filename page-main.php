@@ -80,7 +80,12 @@
                     <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">
-                        <a class="product-row__button button button--red">В корзину</a>
+                        <a class="product-row__button button button--check button--red">
+                            <span class="button__text">В корзину</span>
+                            <svg class="button__confirm" width="37" height="28" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 16L12 25L34 3" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                         <a class="product-row__button button button--white">Купить в 1 клик</a>
                     </div>
                 </div>
@@ -97,7 +102,12 @@
                     <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">
-                        <a class="product-row__button button button--red">В корзину</a>
+                        <a class="product-row__button button button--red">
+                            <span class="button__text">В корзину</span>
+                            <svg class="button__confirm" width="37" height="28" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 16L12 25L34 3" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                         <a class="product-row__button button button--white">Купить в 1 клик</a>
                     </div>
                 </div>

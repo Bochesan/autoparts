@@ -63,8 +63,6 @@
                     item.classList.remove(self._sortTypeAsc.class);
                     parent.removeAttribute("data-sort");
 
-                    // parent["data-sort"] = this._sortTypeAsc.dataSort;
-
             });
         }
 
@@ -129,7 +127,8 @@
 
             getQuery = "?" + arrayQuery.join("&");
 
-            //здесь должен вызываться ajax и принимать get строку
+            //Todo: здесь должен вызываться ajax и принимать get строку
+            //Todo: здесь должен вызываться historyAPI для сохранения истории с get запросами
             console.log(getQuery);
 
         }
@@ -154,14 +153,15 @@
             this._brandItem.forEach(function(item) {
                 item.addEventListener("click", function(event) {
                     event.preventDefault();
-                    self._selectBrand(this);
-                    //Вызов метода формирования Get запроса
-                    self._queryFormation();
+                    if (!this.classList.contains("is-active")) {
+                        self._selectBrand(this);
+                        //Вызов метода формирования Get запроса
+                        self._queryFormation();
+                    }
                 })
             })
 
             this.searchItem.getElementsByTagName("input")[0].addEventListener("input", function() {
-                // console.log(this.value);
                 //Вызов метода формирования Get запроса
                 self._queryFormation();
             })

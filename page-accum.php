@@ -39,10 +39,10 @@
             <div class="catalog-nav__controls">
                 <span class="catalog-nav__hover"></span>
                 <ul class="catalog-nav__controls-list">
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">Shell</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link is-active">Mobil</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">GL Синт</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">GL Минер</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="shell">Shell</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link is-active" data-brand="mobil">Mobil</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_sint">GL Синт</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_miner">GL Минер</a></li>
                 </ul>
             </div>
         </div>
@@ -52,16 +52,13 @@
 
     <div class="catalog__filter">
         <div class="catalog-filter">
-            <div class="catalog-filter__col catalog-filter__col-1" data-filter="active" data-sort="">
+            <div class="catalog-filter__col catalog-filter__col-1" data-filter="name" data-sort="asc">
                 <span class="catalog-filter__col-btn is-active sort-up">Название</span>
             </div>
-            <div class="catalog-filter__col catalog-filter__col-2" data-filter="noactive" data-sort="">
-                <span class="catalog-filter__col-btn is-active sort-down">Литраж</span>
-            </div>
-            <div class="catalog-filter__col catalog-filter__col-3" data-filter="noactive" data-sort="">
+            <div class="catalog-filter__col catalog-filter__col-3"  data-filter="price" data-sort="asc">
                 <span class="catalog-filter__col-btn">Цена</span>
             </div>
-            <div class="catalog-filter__col catalog-filter__col-4">
+            <div class="catalog-filter__col catalog-filter__col-4" data-search="search">
                 <form class="catalog-filter__form" action="index.html" method="post">
                     <input type="input" name="" value="">
                     <input type="submit" name="" value="">
@@ -79,7 +76,6 @@
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
-                    <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">
                         <a class="product-row__button button button--red">
@@ -131,7 +127,6 @@
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
-                    <div class="product-row__size">4 л</div>
                     <div class="product-row__prise">2 080,00 р</div>
                     <div class="product-row__buttons">
                         <a class="product-row__button button button--red">

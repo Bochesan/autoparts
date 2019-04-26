@@ -129,6 +129,7 @@
 
             getQuery = "?" + arrayQuery.join("&");
 
+            //здесь должен вызываться ajax и принимать get строку
             console.log(getQuery);
 
         }

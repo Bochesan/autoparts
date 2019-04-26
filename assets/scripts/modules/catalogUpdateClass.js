@@ -7,6 +7,7 @@
             this._products = this._self.querySelectorAll("." + productsContainerClass)[0];
         }
 
+
         _cleanProducts() {
             this._products.innerHTML = "";
         }

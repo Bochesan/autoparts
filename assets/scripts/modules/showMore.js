@@ -1,6 +1,6 @@
 ;(function() {
-    $(document).on('click', '.product-row__info-button', function() {
-        $(this).closest('.product-row').find('.product-row__info-button').toggleClass('is-active');
-        $(this).closest('.product-row').find('.product-row__info-content').slideToggle(300);
+    $(document).on('click', '.slide-info__button', function() {
+        $(this).closest('.slide-info').find('.slide-info__button').toggleClass('is-active');
+        $(this).closest('.slide-info').find('.slide-info__content').slideToggle(300);
     });
 })();

@@ -87,32 +87,32 @@
                         <a class="product-row__button button button--white">Купить в 1 клик</a>
                     </div>
                 </div>
-                <div class="product-row__info">
-                    <div class="product-row__info-controls">
-                        <span class="product-row__info-button is-active">Подробнее</span>
-                        <span class="product-row__info-button">Скрыть</span>
+                <div class="slide-info">
+                    <div class="slide-info__controls">
+                        <span class="slide-info__button is-active">Подробнее</span>
+                        <span class="slide-info__button">Скрыть</span>
                     </div>
-                    <div class="product-row__info-content">
+                    <div class="slide-info__content">
                         <ul>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatum vero ab sapiente nihil fuga.</span>
+                                <span class="slide-info__title">Lorem ipsum:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatum vero ab sapiente nihil fuga.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est voluptatibus voluptatum eligendi debitis culpa laboriosam quis dolore sit, sapiente soluta ab ex, at, eaque. Natus sit, rerum! Optio distinctio, voluptatem accusamus commodi, quisquam consequatur, corporis obcaecati labore explicabo vitae illum sed voluptatibus. Consequuntur inventore, fugit autem repudiandae cumque error?</span>
+                                <span class="slide-info__title">Lorem:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est voluptatibus voluptatum eligendi debitis culpa laboriosam quis dolore sit, sapiente soluta ab ex, at, eaque. Natus sit, rerum! Optio distinctio, voluptatem accusamus commodi, quisquam consequatur, corporis obcaecati labore explicabo vitae illum sed voluptatibus. Consequuntur inventore, fugit autem repudiandae cumque error?</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, maxime.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, maxime.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor sit amet:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit, quibusdam eligendi delectus voluptatem incidunt obcaecati, repellat fugit labore nemo, rem, repellendus nostrum necessitatibus ratione.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor sit amet:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit, quibusdam eligendi delectus voluptatem incidunt obcaecati, repellat fugit labore nemo, rem, repellendus nostrum necessitatibus ratione.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor sit:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloremque.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor sit:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloremque.</span>
                             </li>
                         </ul>
                     </div>
@@ -138,32 +138,32 @@
                         <a class="product-row__button button button--white">Купить в 1 клик</a>
                     </div>
                 </div>
-                <div class="product-row__info">
-                    <div class="product-row__info-controls">
-                        <span class="product-row__info-button is-active">Подробнее</span>
-                        <span class="product-row__info-button">Скрыть</span>
+                <div class="slide-info">
+                    <div class="slide-info__controls">
+                        <span class="slide-info__button is-active">Подробнее</span>
+                        <span class="slide-info__button">Скрыть</span>
                     </div>
-                    <div class="product-row__info-content">
+                    <div class="slide-info__content">
                         <ul>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatum vero ab sapiente nihil fuga.</span>
+                                <span class="slide-info__title">Lorem ipsum:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatum vero ab sapiente nihil fuga.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est voluptatibus voluptatum eligendi debitis culpa laboriosam quis dolore sit, sapiente soluta ab ex, at, eaque. Natus sit, rerum! Optio distinctio, voluptatem accusamus commodi, quisquam consequatur, corporis obcaecati labore explicabo vitae illum sed voluptatibus. Consequuntur inventore, fugit autem repudiandae cumque error?</span>
+                                <span class="slide-info__title">Lorem:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est voluptatibus voluptatum eligendi debitis culpa laboriosam quis dolore sit, sapiente soluta ab ex, at, eaque. Natus sit, rerum! Optio distinctio, voluptatem accusamus commodi, quisquam consequatur, corporis obcaecati labore explicabo vitae illum sed voluptatibus. Consequuntur inventore, fugit autem repudiandae cumque error?</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, maxime.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, maxime.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor sit amet:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit, quibusdam eligendi delectus voluptatem incidunt obcaecati, repellat fugit labore nemo, rem, repellendus nostrum necessitatibus ratione.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor sit amet:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sit, quibusdam eligendi delectus voluptatem incidunt obcaecati, repellat fugit labore nemo, rem, repellendus nostrum necessitatibus ratione.</span>
                             </li>
                             <li>
-                                <span class="product-row__info-title">Lorem ipsum dolor sit:</span>
-                                <span class="product-row__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloremque.</span>
+                                <span class="slide-info__title">Lorem ipsum dolor sit:</span>
+                                <span class="slide-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloremque.</span>
                             </li>
                         </ul>
                     </div>

@@ -2,6 +2,9 @@
 
     class Catalog {
         constructor(self, titleClass, productsContainerClass){
+            if (self === undefined) {
+                return false;
+            }
             this._self = self;
             this._title = this._self.querySelectorAll("." + titleClass)[0];
             this._products = this._self.querySelectorAll("." + productsContainerClass)[0];
@@ -35,6 +38,13 @@
 
     class Filter {
         constructor(containerBrands, containerFilter) {
+            if (containerBrands === undefined) {
+                return false;
+            }
+            if (containerFilter === undefined) {
+                return false;
+            }
+
             this._containerBrands = containerBrands;
             this._brandItem = this._containerBrands.querySelectorAll(".catalog-nav__controls-link");
 

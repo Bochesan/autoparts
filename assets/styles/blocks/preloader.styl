@@ -1,6 +1,6 @@
 .preloader
     min-height: rel-size(160px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -11,6 +11,9 @@
     height: 100%;
     width: 100%;
     z-index: 100;
+
+    &--active
+        display: flex;
 
     svg
         animation: preloader 30s infinite linear;

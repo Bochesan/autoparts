@@ -39,10 +39,10 @@
             <div class="catalog-nav__controls">
                 <span class="catalog-nav__hover"></span>
                 <ul class="catalog-nav__controls-list">
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">Shell</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link is-active">Mobil</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">GL Синт</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link">GL Минер</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="shell">Shell</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link is-active" data-brand="mobil">Mobil</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_sint">GL Синт</a></li>
+                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_miner">GL Минер</a></li>
                 </ul>
             </div>
         </div>
@@ -52,10 +52,10 @@
 
     <div class="catalog__filter">
         <div class="catalog-filter">
-            <div class="catalog-filter__col catalog-filter__col-1" data-filter="name" data-sort="">
+            <div class="catalog-filter__col catalog-filter__col-1" data-filter="name" data-sort="asc">
                 <span class="catalog-filter__col-btn is-active sort-up">Название</span>
             </div>
-            <div class="catalog-filter__col catalog-filter__col-3" data-filter="price" data-sort="">
+            <div class="catalog-filter__col catalog-filter__col-3" data-filter="price" data-sort="asc">
                 <span class="catalog-filter__col-btn">Цена</span>
             </div>
             <div class="catalog-filter__col catalog-filter__col-4" data-search="search">

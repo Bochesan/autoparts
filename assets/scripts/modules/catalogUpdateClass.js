@@ -105,6 +105,32 @@
 
         _queryFormation() {
             //Метод формирования get запроса
+            let arrayQuery = [],
+                searchItem = this.searchItem.getElementsByTagName("input")[0],
+                getQuery;
+
+            this._brandItem.forEach(function(item) {
+                if (item.classList.contains("is-active")) {
+                    arrayQuery.push("brand=" + item.getAttribute("data-brand"));
+                }
+            });
+
+            this._filterItem.forEach(function(item) {
+                let parent = item.closest(".catalog-filter__col");
+                if (item.classList.contains("is-active")) {
+                    arrayQuery.push("sort=" + parent.getAttribute("data-sort"));
+                    arrayQuery.push("sortType=" + parent.getAttribute("data-filter"));
+                }
+            });
+
+            if (searchItem.value !== "") {
+                arrayQuery.push("search=" + searchItem.value);
+            }
+
+            getQuery = "?" + arrayQuery.join("&");
+
+            console.log(getQuery);
+
         }
 
         init() {
@@ -128,11 +154,13 @@
                 item.addEventListener("click", function(event) {
                     event.preventDefault();
                     self._selectBrand(this);
+                    //Вызов метода формирования Get запроса
+                    self._queryFormation();
                 })
             })
 
             this.searchItem.getElementsByTagName("input")[0].addEventListener("input", function() {
-                console.log(this.value);
+                // console.log(this.value);
                 //Вызов метода формирования Get запроса
                 self._queryFormation();
             })

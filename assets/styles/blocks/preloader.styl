@@ -1,0 +1,47 @@
+.preloader
+    min-height: rel-size(160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: preloader 30s infinite linear;
+    overflow: hidden;
+
+    .load
+        opacity: 0;
+        animation: loader 4.70s infinite linear;
+
+    .load-1
+        animation-delay: 0s;
+    .load-2
+        animation-delay: 0.5s;
+    .load-3
+        animation-delay: 1s;
+    .load-4
+        animation-delay: 1.5s;
+    .load-5
+        animation-delay: 2s;
+    .load-6
+        animation-delay: 2.5s;
+    .load-7
+        animation-delay: 3s;
+    .load-8
+        animation-delay: 3.5s;
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loader {
+    0%
+    100% {
+        opacity: 1;
+    }
+    60%
+    80% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,107 @@
+.delivery
+
+    &__title
+        margin-bottom: rel-size(40px);
+
+    &__price
+        margin-bottom: rel-size(100px);
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rel-size(48px);
+        line-height: rel-size(70px);
+        color: #3A3A3A;
+
+    &__form
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: rel-size(40px);
+
+    &__form-label
+        width: 49%;
+        margin-right: 2%;
+        position: relative;
+        margin-bottom: rel-size(60px);
+        border: 1px solid #000;
+        cursor: pointer;
+
+        &:nth-child(2n)
+            margin-right: 0;
+
+        &.error
+            border: 1px solid #FF1D1D;
+
+        &.done
+            border: 1px solid #27AE60;
+
+    &__form-input
+        height: rel-size(110px);
+        display: block;
+        width: 100%;
+        padding: 0 rel-size(40px);
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: rel-size(24px);
+        line-height: rel-size(29px);
+        color: #3A3A3A;
+
+        &:focus + .delivery__form-input-placeholder
+            bottom: 100%;
+            padding: 0;
+            height: rel-size(40px);
+
+    &__form-input-placeholder
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 rel-size(40px);
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: rel-size(24px);
+        line-height: rel-size(29px);
+        color: #3A3A3A;
+        transition: 0.4s
+
+.delivery__form-label
+
+      &.value .delivery__form-input-placeholder
+        @extend .delivery__form-input:focus + .delivery__form-input-placeholder
+
+.ya-map
+    height: 500px;
+
+.hr-sect
+    margin-bottom: rel-size(100px);
+
+    .hr-pagination
+        background: #F9F9F9;
+        display: inline-flex;
+        align-items: flex-start;
+        border-radius: 50px;
+        margin-bottom: rel-size(100px);
+
+    .hr-slider
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+    .hr-slider-slide
+        display: none;
+
+    .hr-slider-slide.is-active
+        display: block;
+
+    .hr-pagination__step
+        cursor: pointer;
+        user-select: none;
+
+    .hr-pagination__step.is-active
+        cursor: default;

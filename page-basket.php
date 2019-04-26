@@ -254,4 +254,79 @@
     </div>
 </div>
 
+<div class="delivery">
+    <div class="delivery__title">Выберите способ доставки</div>
+    <div class="delivery__tabs hr-sect">
+        <div class="hr-pagination">
+            <div class="hr-pagination__step button-no-active button is-active" data-index="1">Доставка</div>
+            <div class="hr-pagination__step button-no-active" data-index="2">Самовывоз</div>
+        </div>
+        <div class="delivery__price">Итого: <span class="delivery__price-num">28 080</span>,00 р</div>
+        <div class="hr-slider-box">
+            <div class="hr-slider">
+                <div class="hr-slider-slide is-active" data-index="1">
+                    <form action="/" method="POST" class="delivery__form">
+                        <label class="delivery__form-label error">
+                            <input type="text" class="delivery__form-input">
+                            <span class="delivery__form-input-placeholder">Ваше ФИО</span>
+                        </label>
+                        <label class="delivery__form-label done">
+                            <input type="text" class="delivery__form-input">
+                            <span class="delivery__form-input-placeholder">Ваш телефон</span>
+                        </label>
+                        <label class="delivery__form-label">
+                            <input type="text" class="delivery__form-input">
+                            <span class="delivery__form-input-placeholder">Ваш e-mail</span>
+                        </label>
+                        <label class="delivery__form-label">
+                            <input type="text" class="delivery__form-input">
+                            <span class="delivery__form-input-placeholder">Адрес доставки</span>
+                        </label>
+                    </form>
+                </div>
+                <div class="hr-slider-slide" data-index="2">
+                    <div class="ya-map" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init () {
+            var myMap = new ymaps.Map('map', {
+                    center: [55.73111556900278,36.84740149999999],
+                    zoom: 15
+                }, {
+                searchControlProvider: 'yandex#search'
+                }),
+
+
+
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'Автозапчасти в Звенигороде',
+                    balloonContent: '<p><p><b>Автозапчасти в Звенигороде</b></p><p>Фрунзе, 19/1, Звенигород, Московская область</p><p><a href="tel:+74959925321">+7 (495) 992–53–21</a></p></p>'
+                }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: '/media/favicon-32x32.png',
+                    // Размеры метки.
+                    iconImageSize: [30, 30],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-15, -15]
+                });
+
+            myMap.geoObjects.add(myPlacemark);
+
+            myMap.behaviors.disable('scrollZoom');
+
+        }
+    </script>
+
 <? require $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

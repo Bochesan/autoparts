@@ -2,6 +2,9 @@
     background: #F9F9F9;
     padding: rel-size(20px);
     margin-bottom: rel-size(30px);
+    transform: translate(0,0);
+    opacity: 1;
+    animation: productView 1s ease-out;
 
     &__content
         display: flex;
@@ -124,3 +127,14 @@
 
             &:last-child
                 margin-right: 0;
+
+@keyframes productView {
+    0% {
+        transform: translate(0, 30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0%);
+        opacity: 1;
+    }
+}

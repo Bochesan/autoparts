@@ -47,10 +47,10 @@ $buildDest = "/assets/build/";
                 <!-- <div class="header-buttons__search">
                     <img src="/media/images/search.svg" alt="">
                 </div> -->
-                <div class="header-buttons__cart header-buttons__cart--basket is-active">
+                <a href="/page-basket.php" class="header-buttons__cart header-buttons__cart--basket is-active">
                     <img src="/media/images/cart.svg" alt="">
                     <span class="basket-num">0</span>
-                </div>
+                </a>
             </div>
         </div>
     </header>

@@ -13,7 +13,7 @@
         <div class="basket-products__content">
 
             <div class="basket-products__product">
-                <div class="basket-products__head">
+                <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
                         <img src="/media/images/oil.png" alt="">
                     </div>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="basket-products__product">
-                <div class="basket-products__head">
+                <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
                         <img src="/media/images/oil.png" alt="">
                     </div>
@@ -127,7 +127,7 @@
             </div>
 
             <div class="basket-products__product">
-                <div class="basket-products__head">
+                <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
                         <img src="/media/images/oil.png" alt="">
                     </div>
@@ -184,7 +184,7 @@
             </div>
 
             <div class="basket-products__product">
-                <div class="basket-products__head">
+                <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
                         <img src="/media/images/oil.png" alt="">
                     </div>
@@ -266,22 +266,25 @@
             <div class="hr-slider">
                 <div class="hr-slider-slide is-active" data-index="1">
                     <form action="/" method="POST" class="delivery__form">
-                        <label class="delivery__form-label error">
-                            <input type="text" class="delivery__form-input">
-                            <span class="delivery__form-input-placeholder">Ваше ФИО</span>
-                        </label>
-                        <label class="delivery__form-label done">
-                            <input type="text" class="delivery__form-input">
-                            <span class="delivery__form-input-placeholder">Ваш телефон</span>
-                        </label>
-                        <label class="delivery__form-label">
-                            <input type="text" class="delivery__form-input">
-                            <span class="delivery__form-input-placeholder">Ваш e-mail</span>
-                        </label>
-                        <label class="delivery__form-label">
-                            <input type="text" class="delivery__form-input">
-                            <span class="delivery__form-input-placeholder">Адрес доставки</span>
-                        </label>
+                        <div class="delivery__form-row">
+                            <label class="delivery__form-label error">
+                                <input type="text" class="delivery__form-input">
+                                <span class="delivery__form-input-placeholder">Ваше ФИО</span>
+                            </label>
+                            <label class="delivery__form-label done">
+                                <input type="text" class="delivery__form-input">
+                                <span class="delivery__form-input-placeholder">Ваш телефон</span>
+                            </label>
+                            <label class="delivery__form-label">
+                                <input type="text" class="delivery__form-input">
+                                <span class="delivery__form-input-placeholder">Ваш e-mail</span>
+                            </label>
+                            <label class="delivery__form-label">
+                                <input type="text" class="delivery__form-input">
+                                <span class="delivery__form-input-placeholder">Адрес доставки</span>
+                            </label>
+                        </div>
+                        <input type="submit" class="delivery__form-button button button--red" name="" value="Оформить">
                     </form>
                 </div>
                 <div class="hr-slider-slide" data-index="2">

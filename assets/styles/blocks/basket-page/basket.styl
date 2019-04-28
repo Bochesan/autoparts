@@ -8,16 +8,29 @@
 .basket
     display: flex;
     justify-content: space-between;
-    margin-bottom: rel-size(120px);
+    margin-bottom: rel-size(60px);
+    flex-wrap: wrap;
 
 .basket-products
     width: calc(100% - 600px);
+
+    +below(1560px)
+        width: calc(100% - 440px);
+
+    +below(1320px)
+        width: 100%;
+        margin-bottom: rel-size(40px);
 
     &__head
         display: flex;
         justify-content: space-between;
         margin-bottom: rel-size(60px);
         height: rel-size(30px);
+
+        +below(580px)
+            flex-direction: column;
+            height: initial;
+            margin-bottom: 0;
 
     &__head-title
     &__remove-products
@@ -27,6 +40,9 @@
         font-size: rel-size(24px);
         line-height: rel-size(27px);
         color: #3A3A3A;
+
+        +below(580px)
+            margin-bottom: rel-size(30px);
 
     &__remove-products
         color: #FF1D1D;
@@ -40,14 +56,24 @@
         padding: rel-size(65px) rel-size(40px);
         margin-bottom: rel-size(40px);
 
-    &__head
+        +below(1440px)
+            padding: rel-size(45px) rel-size(20px);
+
+    &__head-row
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        +below(768px)
+            justify-content: center;
 
     &__product-image
         width: rel-size(100px);
         height: @width;
+
+        +below(768px)
+            margin-bottom: rel-size(30px);
 
         img
             display: block;
@@ -63,10 +89,21 @@
         color: #3A3A3A;
         padding-right: rel-size(20px);
 
+        +below(768px)
+            width: 100%;
+            text-align: center;
+            margin-bottom: rel-size(30px);
+
     &__product-num
         display: inline-flex;
         flex-direction: row;
         align-items: center;
+        flex-wrap: nowrap;
+
+        +below(768px)
+            width: 100%;
+            justify-content: center;
+            margin-bottom: rel-size(30px);
 
     &__product-size
         margin-right: rel-size(20px);
@@ -76,6 +113,7 @@
         font-size: rel-size(24px);
         line-height: rel-size(26px);
         color: #3A3A3A;
+        white-space: nowrap;
 
     &__product-num-change
         margin: 0 rel-size(10px);
@@ -90,6 +128,12 @@
         font-size: rel-size(24px);
         line-height: rel-size(26px);
         color: #3A3A3A;
+        white-space: nowrap;
+
+        +below(768px)
+            width: 100%;
+            text-align: center;
+            margin-bottom: rel-size(30px);
 
     &__product-remove
         width: rel-size(30px);
@@ -104,6 +148,13 @@
 .basket-info
     width: 540px;
     padding-top: rel-size(90px);
+
+    +below(1560px)
+        width: 400px;
+
+    +below(1320px)
+        width: 100%;
+        padding-top: 0;
 
     &__box
         margin-bottom: rel-size(80px);

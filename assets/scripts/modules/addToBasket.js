@@ -1,5 +1,5 @@
 ;(function() {
-    $(document).on('click', '.product-row__button', function() {
+    $(document).on('click', '.button--basket', function() {
         if (!$(this).hasClass('animate')) {
             $(this).addClass('animate');
             $(this).addClass("button--check");

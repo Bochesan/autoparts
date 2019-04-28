@@ -1,13 +1,14 @@
 ;(function(){
 
     class Catalog {
-        constructor(self, titleClass, productsContainerClass){
+        constructor(self, titleClass, productsContainerClass, productsPreloaderClass){
             if (self === undefined) {
                 return false;
             }
             this._self = self;
             this._title = this._self.querySelectorAll("." + titleClass)[0];
             this._products = this._self.querySelectorAll("." + productsContainerClass)[0];
+            this.preloader = this._self.querySelectorAll("." + productsPreloaderClass)[0];
         }
 
 
@@ -15,12 +16,13 @@
             this._products.innerHTML = "";
         }
 
-        _playPreloader() {
+        playPreloader() {
             // Сделать запуск прелоудера
+            this.preloader.classList.add("preloader--active");
         }
 
-        _stopPreloader() {
-            // Сделать остановку прелоудера
+        stopPreloader() {
+            this.preloader.classList.remove("preloader--active");
         }
 
         updateTitle(title) {
@@ -61,6 +63,7 @@
                 dataSort: "desc"
             }
 
+            this.timeOutAjax;
             this.init();
         }
 
@@ -112,7 +115,8 @@
             }
         }
 
-        _queryFormation() {
+        _queryFormation(delay) {
+            clearTimeout(this.timeOutAjax);
             //Метод формирования get запроса
             let arrayQuery = [],
                 searchItem = this.searchItem.getElementsByTagName("input")[0],
@@ -140,6 +144,19 @@
 
             //Todo: здесь должен вызываться ajax и принимать get строку
             //Todo: здесь должен вызываться historyAPI для сохранения истории с get запросами
+
+            //Тестовое ajax Соединение
+            let ajaxConnect = new AjaxGetProducts("test.json", "get");
+
+            if (delay === undefined){
+                ajaxConnect.send();
+            } else {
+                catalodTest.playPreloader();
+                this.timeOutAjax = setTimeout(function(){
+                    ajaxConnect.send();
+                }, delay)
+            }
+
             console.log(getQuery);
 
         }
@@ -174,7 +191,7 @@
 
             this.searchItem.getElementsByTagName("input")[0].addEventListener("input", function() {
                 //Вызов метода формирования Get запроса
-                self._queryFormation();
+                self._queryFormation(1000);
             })
         }
     }
@@ -189,6 +206,7 @@
 
         _progress() {
             // Сделать действие во время процесса загрузки
+            catalodTest.playPreloader();
         }
 
         _complete() {
@@ -200,6 +218,11 @@
             //   let obj = JSON.parse(this.response)
             //   console.log( obj ); // responseText -- текст ответа.
             let result = JSON.parse(this.response);
+
+            catalodTest.updateTitle(result.title);
+            catalodTest.updateListProducts(result.elements);
+
+            catalodTest.stopPreloader();
                 console.log(result);
 
         }
@@ -223,11 +246,10 @@
     }
 
 
-    let catalodTest = new Catalog(document.querySelectorAll(".catalog")[0], "catalog__title", "catalog__container");
-    let ajaxConnect = new AjaxGetProducts("test.json", "get");
+    let catalodTest = new Catalog(document.querySelectorAll(".catalog")[0], "catalog__title", "catalog__product", "preloader");
+
     let filter = new Filter(document.querySelectorAll(".catalog-nav__controls")[0], document.querySelectorAll(".catalog-filter")[0]);
 
-    ajaxConnect.send({data: 1});
 
     //Тест
     // window.divArray = divArray;

@@ -26,6 +26,7 @@
 
         updateTitle(title) {
             this._title.innerHTML = title;
+            this._title.setAttribute("data-name", title);
         }
 
         updateListProducts(products) {
@@ -236,7 +237,7 @@
             catalodTest.updateListProducts(result.elements);
 
             catalodTest.stopPreloader();
-            
+
             console.log(result);
 
         }

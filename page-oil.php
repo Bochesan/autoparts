@@ -67,7 +67,7 @@
         </div>
     </div>
     <div class="catalog__container">
-        <div class="preloader preloader--active">
+        <div class="preloader">
             <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="load load-1" d="M40 3C40 1.34315 38.6569 0 37 0C35.3431 0 34 1.34315 34 3V17C34 18.6569 35.3431 20 37 20C38.6569 20 40 18.6569 40 17V3Z" fill="#EE2B2A"/>
                 <path class="load load-2" d="M63.1584 15.0778C64.33 13.9063 64.33 12.0068 63.1584 10.8352C61.9869 9.66361 60.0874 9.66361 58.9158 10.8352L49.0163 20.7347C47.8447 21.9063 47.8447 23.8058 49.0163 24.9773C50.1879 26.1489 52.0874 26.1489 53.2589 24.9773L63.1584 15.0778Z" fill="#EE2B2A"/>

@@ -17,7 +17,6 @@
         }
 
         playPreloader() {
-            // Сделать запуск прелоудера
             this.preloader.classList.add("preloader--active");
         }
 
@@ -120,11 +119,13 @@
             //Метод формирования get запроса
             let arrayQuery = [],
                 searchItem = this.searchItem.getElementsByTagName("input")[0],
+                brand,
                 getQuery;
 
             this._brandItem.forEach(function(item) {
                 if (item.classList.contains("is-active")) {
                     arrayQuery.push("brand=" + item.getAttribute("data-brand"));
+                    brand = item.getAttribute("data-brand");
                 }
             });
 
@@ -144,8 +145,10 @@
 
             //Todo: здесь должен вызываться ajax и принимать get строку
             //Todo: здесь должен вызываться historyAPI для сохранения истории с get запросами
+            let historyObj = new HistoryConrtol(getQuery);
+            historyObj.setHistory(brand);
 
-            //Тестовое ajax Соединение
+            //Тестовое ajax Нужно будет указывать новый адрес
             let ajaxConnect = new AjaxGetProducts("test.json", "get");
 
             if (delay === undefined){
@@ -196,6 +199,24 @@
         }
     }
 
+    class HistoryConrtol {
+        constructor(url) {
+            this._url = url;
+            this._historyObj = window.history;
+        }
+
+        setHistory(brand) {
+            if (brand === this._historyObj.state) {
+                this._historyObj.replaceState(brand, brand, this._url);
+            } else {
+                this._historyObj.pushState(brand, brand, this._url);
+            }
+        }
+
+        readHistory(getQuery) {
+            //Todo: здесь нужно парсить get запрос и преводить состояние страницы к актуальному виду
+        }
+    }
 
     class AjaxGetProducts {
         constructor(url, type) {
@@ -205,25 +226,18 @@
         }
 
         _progress() {
-            // Сделать действие во время процесса загрузки
             catalodTest.playPreloader();
         }
 
         _complete() {
-            // if (this.status != 200) {
-            //   // обработать ошибку
-            //   console.log( this.status + ': ' + this.statusText ); // пример вывода: 404: Not Found
-            // } else {
-            //   // вывести результат
-            //   let obj = JSON.parse(this.response)
-            //   console.log( obj ); // responseText -- текст ответа.
             let result = JSON.parse(this.response);
 
             catalodTest.updateTitle(result.title);
             catalodTest.updateListProducts(result.elements);
 
             catalodTest.stopPreloader();
-                console.log(result);
+            
+            console.log(result);
 
         }
 

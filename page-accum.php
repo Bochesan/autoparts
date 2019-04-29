@@ -182,6 +182,9 @@
                 </div>
             </div>
         </div>
+        <div class="catalog__more">
+            <a href="#" class="catalog__more-button button button--red">Еще</a>
+        </div>
     </div>
 </div>
 

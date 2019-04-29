@@ -104,6 +104,7 @@
             width: 100%;
             justify-content: center;
             margin-bottom: rel-size(30px);
+            flex-wrap: wrap;
 
     &__product-size
         margin-right: rel-size(20px);
@@ -115,11 +116,22 @@
         color: #3A3A3A;
         white-space: nowrap;
 
+        +below(768px)
+            width: 100%;
+            text-align: center;
+            margin-bottom: rel-size(20px);
+            margin-right: 0;
+
     &__product-num-change
         margin: 0 rel-size(10px);
         color: #FF1D1D;
         cursor: pointer;
         user-select: none;
+
+        +below(768px)
+            font-size: rel-size(40px);
+            font-weight: bold;
+            padding: 0 rel-size(30px);
 
     &__product-price
         font-family: 'Montserrat', sans-serif;

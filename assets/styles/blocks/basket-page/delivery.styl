@@ -31,22 +31,14 @@
         margin-right: 2%;
         position: relative;
         margin-bottom: rel-size(50px);
-        border: 1px solid #000;
         cursor: pointer;
 
         +below(768px)
             width: 100%;
             margin-right: 0;
-            margin-bottom: rel-size(30px);
 
         &:nth-child(2n)
             margin-right: 0;
-
-        &.error
-            border: 1px solid #FF1D1D;
-
-        &.done
-            border: 1px solid #27AE60;
 
     &__form-input
         height: rel-size(70px);
@@ -59,6 +51,12 @@
         font-size: rel-size(24px);
         line-height: rel-size(29px);
         color: #3A3A3A;
+
+        &.error
+            border: 1px solid #FF1D1D;
+
+        &.done
+            border: 1px solid #27AE60;
 
         &:focus + .delivery__form-input-placeholder
             bottom: 100%;

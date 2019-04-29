@@ -88,6 +88,8 @@
         _addClassFilter(item) {
             let parent = item.closest(".catalog-filter__col");
 
+            console.log(item);
+
             item.classList.add(this._activeClass);
             item.classList.add(this._sortTypeAsc.class);
 
@@ -149,12 +151,10 @@
 
             getQuery = "?" + arrayQuery.join("&");
 
-            //Todo: здесь должен вызываться ajax и принимать get строку
-            //Todo: здесь должен вызываться historyAPI для сохранения истории с get запросами
-            let historyObj = new HistoryConrtol(getQuery);
-            historyObj.setHistory(brand);
+            historyObj.setHistory(getQuery, brand);
 
-            //Тестовое ajax Нужно будет указывать новый адрес
+            //Todo: здесь надо будет сделать актуальный урл для ajax запросов
+            // Пример: let ajaxConnect = new AjaxGetProducts(window.location.href + getQuery, "get", true);
             let ajaxConnect = new AjaxGetProducts("test.json", "get", productUpdate);
 
             if (delay === undefined){
@@ -167,6 +167,55 @@
             }
 
             console.log(getQuery);
+
+        }
+
+        updateStateFilterFromUrl(arrayResult) {
+            // updateStateFilterFromUrl(arrayResult[0][1], arrayResult[2][1], arrayResult[1][1], arrayResult[3][1])
+            let self = this;
+
+
+            if (arrayResult[0] !== undefined) {
+                this._brandItem.forEach(function(item) {
+                    if (item.getAttribute("data-brand") === arrayResult[0][1]) {
+                        self._selectBrand(item);
+                    }
+                })
+            } else {
+                this._selectBrand(this._brandItem[0]);
+            }
+
+            if (arrayResult[2] !== undefined) {
+                this._filterItem.forEach(function(item) {
+                    if (item.closest(".catalog-filter__col").getAttribute("data-filter") === arrayResult[2][1]) {
+                        self._cleanClassFilterAll();
+                        self._addClassFilter(item);
+                        item.closest(".catalog-filter__col").setAttribute("data-sort", arrayResult[1][1]);
+
+                        if (arrayResult[1][1] === "asc") {
+                            item.classList.add(self._sortTypeAsc.class);
+                            item.classList.remove(self._sortTypeDesc.class);
+                        } else {
+                            item.classList.remove(self._sortTypeAsc.class);
+                            item.classList.add(self._sortTypeDesc.class);
+                        }
+                    }
+                })
+            } else {
+                this._filterItem.forEach(function(item) {
+                    if (item.closest(".catalog-filter__col").getAttribute("data-filter") === "name"){
+                        self._cleanClassFilterAll();
+                        self._addClassFilter(item);
+                    }
+                });
+            }
+
+            if (arrayResult[3] !== undefined) {
+                console.log(arrayResult[3][1]);
+                self.searchItem.getElementsByTagName("input")[0].value = arrayResult[3][1];
+            } else {
+                self.searchItem.getElementsByTagName("input")[0].value = "";
+            }
 
         }
 
@@ -211,22 +260,64 @@
     }
 
     class HistoryConrtol {
-        constructor(url) {
-            this._url = url;
+        constructor() {
+            this._url;
             this._historyObj = window.history;
+
+            this.init();
         }
 
-        setHistory(brand) {
+        setHistory(getQuery, brand) {
             if (brand === this._historyObj.state) {
-                this._historyObj.replaceState(brand, brand, this._url);
+                this._historyObj.replaceState(brand, brand, getQuery);
             } else {
-                this._historyObj.pushState(brand, brand, this._url);
+                this._historyObj.pushState(brand, brand, getQuery);
             }
         }
 
-        readHistory(getQuery) {
-            //Todo: здесь нужно парсить get запрос и преводить состояние страницы к актуальному виду
+        _readHistory() {
+            let url = document.location.href,
+                arrayUrl = url.split("?"),
+                arrayGet = [],
+                arrayResult = [];
+
+                if (arrayUrl[1] !== undefined) {
+                    arrayGet = arrayUrl[1].split("&");
+
+
+                    arrayGet.forEach(function(item) {
+                        arrayResult.push(item.split("="));
+                    })
+
+                    console.log(arrayResult);
+
+                    filter.updateStateFilterFromUrl(arrayResult);
+
+                    //Todo: здесь надо будет сделать актуальный урл для ajax запросов
+                    // Пример: let ajaxConnect = new AjaxGetProducts(url, "get", true);
+                    let ajaxConnect = new AjaxGetProducts("test.json", "get", true);
+                    ajaxConnect.send();
+
+                } else {
+
+                    filter.updateStateFilterFromUrl([]);
+
+                    //Todo: здесь надо будет сделать актуальный урл для ajax запросов
+                    // Пример: let ajaxConnect = new AjaxGetProducts(url, "get", true);
+                    let ajaxConnect = new AjaxGetProducts("test.json", "get", true);
+                    ajaxConnect.send();
+
+                }
+
+
         }
+
+        init() {
+            let self = this;
+
+            window.addEventListener("popstate", self._readHistory);
+        }
+
     }
 
     class AjaxGetProducts {
@@ -311,6 +402,7 @@
 
     let filter = new Filter(document.querySelectorAll(".catalog-nav__controls")[0], document.querySelectorAll(".catalog-filter")[0], document.querySelectorAll(".catalog__more")[0]);
 
+    let historyObj = new HistoryConrtol();
 
     //Тест
     // window.divArray = divArray;

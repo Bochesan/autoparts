@@ -53,7 +53,7 @@
     <div class="catalog__filter">
         <div class="catalog-filter">
             <div class="catalog-filter__col catalog-filter__col-1" data-filter="name" data-sort="asc">
-                <span class="catalog-filter__col-btn is-active sort-up">Название</span>
+                <span class="catalog-filter__col-btn is-active sort-down">Название</span>
             </div>
             <div class="catalog-filter__col catalog-filter__col-3" data-filter="price" data-sort="asc">
                 <span class="catalog-filter__col-btn">Цена</span>

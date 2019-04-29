@@ -3,13 +3,37 @@ header
     position: relative;
     z-index: 100;
     background: white;
+    transition: box-shadow 0.3s, transform 0.5s;
+
+    &.fixed
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        animation: slideDownMenu 0.3s linear forwards;
+
+        .header
+            min-height: rel-size(70px);
+
+        .info-line
+            min-height: rel-size(40px);
+
+        & + .main-content
+            padding-top: rel-size(120px);
+
+@keyframes slideDownMenu
+    0%
+        transform: translate(0,-100%);
+    100%
+        transform: translate(0,0);
 
 .header
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
-    height: rel-size(100px);
+    min-height: rel-size(100px);
     position: relative;
 
 .logo

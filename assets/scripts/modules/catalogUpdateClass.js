@@ -39,11 +39,14 @@
     }
 
     class Filter {
-        constructor(containerBrands, containerFilter) {
+        constructor(containerBrands, containerFilter, containerMore) {
             if (containerBrands === undefined) {
                 return false;
             }
             if (containerFilter === undefined) {
+                return false;
+            }
+            if (containerMore === undefined) {
                 return false;
             }
 
@@ -62,6 +65,8 @@
                 class: "sort-up",
                 dataSort: "desc"
             }
+
+            this._containerMore = containerMore;
 
             this.timeOutAjax;
             this.init();
@@ -115,7 +120,7 @@
             }
         }
 
-        _queryFormation(delay) {
+        _queryFormation(productUpdate, delay) {
             clearTimeout(this.timeOutAjax);
             //Метод формирования get запроса
             let arrayQuery = [],
@@ -150,7 +155,7 @@
             historyObj.setHistory(brand);
 
             //Тестовое ajax Нужно будет указывать новый адрес
-            let ajaxConnect = new AjaxGetProducts("test.json", "get");
+            let ajaxConnect = new AjaxGetProducts("test.json", "get", productUpdate);
 
             if (delay === undefined){
                 ajaxConnect.send();
@@ -172,12 +177,12 @@
                     if (item.classList.contains(self._activeClass)) {
                         self._toogleSort(this);
                         //Вызов метода формирования Get запроса
-                        self._queryFormation();
+                        self._queryFormation(true);
                     } else {
                         self._cleanClassFilterAll();
                         self._addClassFilter(this);
                         //Вызов метода формирования Get запроса
-                        self._queryFormation();
+                        self._queryFormation(true);
                     }
                 });
             });
@@ -188,15 +193,20 @@
                     if (!this.classList.contains("is-active")) {
                         self._selectBrand(this);
                         //Вызов метода формирования Get запроса
-                        self._queryFormation();
+                        self._queryFormation(true);
                     }
                 })
             })
 
             this.searchItem.getElementsByTagName("input")[0].addEventListener("input", function() {
                 //Вызов метода формирования Get запроса
-                self._queryFormation(1000);
+                self._queryFormation(true, 1000);
             })
+
+            this._containerMore.querySelectorAll(".catalog__more-button")[0].addEventListener("click", function(event) {
+                event.preventDefault();
+                self._queryFormation(false);
+            });
         }
     }
 
@@ -220,9 +230,10 @@
     }
 
     class AjaxGetProducts {
-        constructor(url, type) {
+        constructor(url, type, productUpdate) {
             this._url = url;
             this._type = type;
+            this._productUpdate = productUpdate;
             this.ajax = new XMLHttpRequest();
         }
 
@@ -233,8 +244,12 @@
         _complete() {
             let result = JSON.parse(this.response);
 
-            catalodTest.updateTitle(result.title);
-            catalodTest.updateListProducts(result.elements);
+            if (productUpdate === true) {
+                catalodTest.updateTitle(result.title);
+                catalodTest.updateListProducts(result.elements);
+            } else {
+                catalodTest.addProducts(result.elements);
+            }
 
             catalodTest.stopPreloader();
 
@@ -242,9 +257,40 @@
 
         }
 
+        _completeUpdatePrpoducts() {
+            let result = JSON.parse(this.response);
+
+            catalodTest.updateTitle(result.title);
+            catalodTest.updateListProducts(result.elements);
+
+            catalodTest.stopPreloader();
+
+            console.log(result);
+        }
+
+        _completeAddProducts() {
+            let result = JSON.parse(this.response);
+
+            catalodTest.addProducts(result.elements);
+
+            catalodTest.stopPreloader();
+
+            console.log(result);
+        }
+
+
         send(data) {
+            let productUpdate = this._productUpdate,
+                self = this;
+
             this.ajax.addEventListener("progress", this._progress, false);
-            this.ajax.addEventListener("load", this._complete, false);
+            this.ajax.addEventListener("load", (function() {
+                if (productUpdate === true) {
+                    return self._completeUpdatePrpoducts;
+                } else {
+                    return self._completeAddProducts;
+                }
+            })(), false);
 
             if (this._type.toLowerCase() === "get") {
 
@@ -263,7 +309,7 @@
 
     let catalodTest = new Catalog(document.querySelectorAll(".catalog")[0], "catalog__title", "catalog__product", "preloader");
 
-    let filter = new Filter(document.querySelectorAll(".catalog-nav__controls")[0], document.querySelectorAll(".catalog-filter")[0]);
+    let filter = new Filter(document.querySelectorAll(".catalog-nav__controls")[0], document.querySelectorAll(".catalog-filter")[0], document.querySelectorAll(".catalog__more")[0]);
 
 
     //Тест

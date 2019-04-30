@@ -22,6 +22,7 @@
             this._self.classList.add('remove');
             setTimeout(()=>{
                 this._self.remove();
+                productsContainer._sumValues();
             }, 550);
         }
 

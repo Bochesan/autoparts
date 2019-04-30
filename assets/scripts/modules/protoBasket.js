@@ -13,15 +13,27 @@
         }
 
         _delete() {
+            let self = this;
             this._del.addEventListener('click', function() {
                 console.log('del');
-                this.closest('.basket-products__product').remove();
+                self._self.remove();
             });
+        }
+
+        init() {
+            this._delete();
         }
 
     }
 
-    let product = new basketProduct(document.querySelectorAll('.basket-products__product')[0], 'basket-products__product-size-num', 'basket-products__product-num-change--minus', 'basket-products__product-num-change--plus', 'basket-products__product-remove');
+    let productsArr = [];
+    let products = document.querySelectorAll('.basket-products__product');
 
-    product._delete();
+    products.forEach(function(item) {
+        let product = new basketProduct(item, 'basket-products__product-size-num', 'basket-products__product-num-change--minus', 'basket-products__product-num-change--plus', 'basket-products__product-remove');
+        productsArr.push(item);
+        product.init();
+    })
+    window.productsArr = productsArr;
+
 })();

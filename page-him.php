@@ -40,10 +40,10 @@
             <div class="catalog-nav__controls">
                 <span class="catalog-nav__hover"></span>
                 <ul class="catalog-nav__controls-list">
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link is-active" data-brand="shell">Shell</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="mobil">Mobil</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_sint">GL Синт</a></li>
-                    <li class="catalog-nav__controls-item"><a href="#" class="catalog-nav__controls-link" data-brand="gl_miner">GL Минер</a></li>
+                    <li class="catalog-nav__controls-item"><a href="?brand=shell&sort=asc&sortType=name" class="catalog-nav__controls-link is-active" data-brand="shell">Shell</a></li>
+                    <li class="catalog-nav__controls-item"><a href="?brand=mobil&sort=asc&sortType=name" class="catalog-nav__controls-link" data-brand="mobil">Mobil</a></li>
+                    <li class="catalog-nav__controls-item"><a href="?brand=gl_sint&sort=asc&sortType=name" class="catalog-nav__controls-link" data-brand="gl_sint">GL Синт</a></li>
+                    <li class="catalog-nav__controls-item"><a href="?brand=gl_miner&sort=asc&sortType=name" class="catalog-nav__controls-link" data-brand="gl_miner">GL Минер</a></li>
                 </ul>
             </div>
         </div>

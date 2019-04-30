@@ -151,6 +151,8 @@
 
             getQuery = "?" + arrayQuery.join("&");
 
+            getQuery = encodeURI(getQuery);
+
             historyObj.setHistory(getQuery, brand);
 
             //Todo: здесь надо будет сделать актуальный урл для ajax запросов
@@ -277,7 +279,7 @@
 
         _readHistory() {
             let url = document.location.href,
-                arrayUrl = url.split("?"),
+                arrayUrl = decodeURI(url).split("?"),
                 arrayGet = [],
                 arrayResult = [];
 

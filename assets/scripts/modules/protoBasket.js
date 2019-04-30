@@ -11,6 +11,7 @@
             this._numPlus = this._self.querySelectorAll('.' + numPlus)[0];
             this._del = this._self.querySelectorAll('.' + del)[0];
             this._size = +this._numProducts.innerHTML;
+            this.init();
         }
 
         get valueProducts() {
@@ -69,8 +70,6 @@
     products.forEach(function(item) {
         let product = new basketProduct(item, 'basket-products__product-size-num', 'basket-products__product-num-change--minus', 'basket-products__product-num-change--plus', 'basket-products__product-remove');
         productsArr.push(item);
-        product.init();
-        product.valueProducts;
     })
     window.productsArr = productsArr;
 
@@ -83,6 +82,7 @@
             this._productsSize = this._self.querySelectorAll('.' + productsSize)[0];
             this._productsRemove = this._self.querySelectorAll('.' + productsRemove)[0];
             this._products = productsArr;
+            this.init();
         }
 
         _deleteAll() {
@@ -116,11 +116,10 @@
                 self._sumValues();
             });
 
-            productsContainer._sumValues();
+            this._sumValues();
         }
     }
 
     let productsContainer = new productsControl(document.querySelectorAll('.basket-products')[0], 'products-num', 'basket-products__remove-products', productsArr);
-    productsContainer.init();
 
 })();

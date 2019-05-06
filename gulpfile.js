@@ -62,7 +62,7 @@ function css() {
     .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 11', 'Android >= 4.1', 'Safari >= 8', 'iOS >= 8']}))
     .pipe(csso())
     .pipe(rename('main.min.css'))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('../maps/'))
     .pipe(gulp.dest(path.dest.styles))
     .pipe(browserSync.stream());
 }
@@ -78,7 +78,7 @@ function js() {
 	.pipe(concat('main.js'))
 	.pipe(uglify())
 	.pipe(rename('main.min.js'))
-	.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write('../maps/'))
 	.pipe(gulp.dest(path.dest.js))
 	.pipe(browserSync.stream());
 }

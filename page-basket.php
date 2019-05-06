@@ -7,7 +7,7 @@
 <div class="basket">
     <div class="basket-products">
         <div class="basket-products__head">
-            <div class="basket-products__head-title">В Вашей корзине <span class="products-num">7</span> товаров</div>
+            <div class="basket-products__head-title">В Вашей корзине <span class="products-num">0</span> товаров</div>
             <span class="basket-products__remove-products">удалить всё</sspan>
         </div>
         <div class="basket-products__content">

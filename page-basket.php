@@ -15,7 +15,7 @@
             <div class="basket-products__product">
                 <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
-                        <img src="/media/images/oil.png" alt="">
+                        <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                     </div>
                     <div class="basket-products__product-title">Helix HX8 A5/B5 5/30</div>
                     <div class="basket-products__product-num">
@@ -72,7 +72,7 @@
             <div class="basket-products__product">
                 <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
-                        <img src="/media/images/oil.png" alt="">
+                        <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                     </div>
                     <div class="basket-products__product-title">Helix HX8 A5/B5 5/30</div>
                     <div class="basket-products__product-num">
@@ -129,7 +129,7 @@
             <div class="basket-products__product">
                 <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
-                        <img src="/media/images/oil.png" alt="">
+                        <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                     </div>
                     <div class="basket-products__product-title">Helix HX8 A5/B5 5/30</div>
                     <div class="basket-products__product-num">
@@ -186,7 +186,7 @@
             <div class="basket-products__product">
                 <div class="basket-products__head-row">
                     <div class="basket-products__product-image">
-                        <img src="/media/images/oil.png" alt="">
+                        <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                     </div>
                     <div class="basket-products__product-title">Helix HX8 A5/B5 5/30</div>
                     <div class="basket-products__product-num">

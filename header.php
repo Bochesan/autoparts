@@ -12,6 +12,7 @@ $buildDest = "/assets/build/";
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="<?=$buildDest?>main.min.css?<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].$buildDest.'main.min.css'); ?>" media="all" />
 </head>
 <body>

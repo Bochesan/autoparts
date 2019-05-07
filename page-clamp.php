@@ -84,7 +84,7 @@
                 <div class="product-row__content">
                     <div class="product-row__title">
                         <div class="product-row__title-image">
-                            <img src="/media/images/oil.png" alt="">
+                            <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="product-row__content">
                     <div class="product-row__title">
                         <div class="product-row__title-image">
-                            <img src="/media/images/oil.png" alt="">
+                            <a data-fancybox href="/media/images/oil.png"><img src="/media/images/oil.png" alt=""></a>
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>

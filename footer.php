@@ -51,6 +51,7 @@
 </div>
 
 <script src="/assets/scripts/jquery-3.3.1.min.js"></script>
+<script src="/assets/scripts/textMaskCore.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="<?=$buildDest?>main.min.js?<?= filemtime($_SERVER['DOCUMENT_ROOT'].$buildDest.'main.min.js'); ?>" defer></script>

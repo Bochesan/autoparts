@@ -1,0 +1,186 @@
+.formYv {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    font-size: 16px;
+    margin: 0 -12px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.formYv__input {
+    position: relative;
+    width: calc(50% - 24px);
+    margin: 1.2em 12px;
+    // margin-top: 2.5em;
+}
+
+.formYv__input input {
+    transition: .3s color;
+    width: 100%;
+    background-color: transparent;
+    border: 0.1em solid #dddddd;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    height: 3.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.45rem;
+    color: #3a3a3a;
+    position: relative;
+    z-index: 1;
+}
+
+.formYv__textarea {
+    position: relative;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.formYv__textarea textarea {
+    transition: .3s color;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: transparent;
+    border: 0.125em solid #dddddd;
+    box-sizing: border-box;
+    padding: 0.3125em 0.625em;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.formYv__submit {
+    margin: 0 12px;
+    margin-top: 1em;
+}
+
+.formYv__label {
+    transition: .3s top, .3s left, .3s font-size;
+    position: absolute;
+    top: .9em;
+    left: 1.625em;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.45rem;
+    color: #3a3a3a;
+    z-index: 0;
+}
+
+.formYv__error {
+    transition: .3s transform, opacity .3s;
+    position: absolute;
+    right: 0;
+    top: 103%;
+    transform: translateY(-200%);
+    font-size: 1.2em;
+    opacity: 0;
+    color: #ff4949;
+}
+
+.formYv__input--focus .formYv__label, .formYv__textarea--focus .formYv__label{
+    top: -1.5rem;
+    left: 0;
+    font-size: 1.3em;
+    color: #202020;
+}
+
+.formYv__input--noEmety .formYv__label, .formYv__textarea--noEmety .formYv__label {
+    top: -1.5rem;
+    left: 0;
+    font-size: 1.3em;
+    color: #202020;
+}
+
+.formYv__input--error .formYv__error, .formYv__textarea--error .formYv__error {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.formYv__input--error input, .formYv__textarea--error textarea {
+    border-color: #ff4949;
+}
+
+
+
+.formYv__checkbox {
+    margin: .5em 12px;
+    // margin-top: 1em;
+    width: calc(100% - 24px);
+    font-size: 1.2rem;
+    line-height: 1.45rem;
+}
+
+.formYv__checkbox--error {
+    /*Сделать стиль ошибки для чекбоксов*/
+}
+
+.formYv__checkbox input{
+    display: none;
+}
+
+.formYv__checkbox input:checked~.customCheckbox .customCheckbox__body:after{
+    width: .5em;
+    height: .5em;
+    opacity: 1;
+}
+
+.customCheckbox {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.customCheckbox__body {
+    display: block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.customCheckbox__body:after {
+    content: " ";
+    transition: .3s width, .3s height, .3s opacity;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0;
+}
+
+.customCheckbox__label {
+    margin-left: .5em;
+}
+
+.formYv__checkbox--error .customCheckbox__body{
+    border-color: #ff4949;
+}
+
+.formYv__checkbox--error .customCheckbox__body:after {
+    background-color: #ff4949;
+}
+
+.formYv__checkbox--error .customCheckbox__label {
+    color: #ff4949;
+}
+
+@media (max-width: 694px) {
+    .formYv__input {
+        width: 100%;
+        margin: .9em 12px;
+    }
+    .formYv__input--focus .formYv__label, .formYv__textarea--focus .formYv__label{
+        font-size: 1em;
+    }
+    .formYv__input--noEmety .formYv__label, .formYv__textarea--noEmety .formYv__label {
+        font-size: 1em;
+    }
+    .formYv__error {
+        font-size: .7em;
+    }
+}

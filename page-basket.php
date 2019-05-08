@@ -287,8 +287,8 @@
                             <span class="formYv__error">Введите адрес</span>
                         </div>
                         <div class="formYv__checkbox">
-                            <input id="checkbox2" name="checkbox" type="checkbox" data-valid="checked">
-                            <label class="customCheckbox" for="checkbox2">
+                            <input id="checkbox1" name="checkbox" type="checkbox" data-valid="checked">
+                            <label class="customCheckbox" for="checkbox1">
                                 <span class="customCheckbox__body"></span>
                                 <span class="customCheckbox__label">Я согласен на обработку персональных данных</span>
                             </label>

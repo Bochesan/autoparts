@@ -354,19 +354,27 @@
         }
     }
 
-    let test = new Form(document.querySelectorAll(".formYv")[0], {
-                            classInputContainer: "formYv__input",
-                            classInputError: "formYv__input--error",
-                            classInputFocus: "formYv__input--focus",
-                            classInputNoEmety: "formYv__input--noEmety",
-                            classTextareaContainer: "formYv__textarea",
-                            classTextareaError: "formYv__textarea--error",
-                            classTextareaFocus: "formYv__textarea--focus",
-                            classTextareaNoEmety: "formYv__textarea--noEmety",
-                            classCheckboxContainer: "formYv__checkbox",
-                            classCheckboxError: "formYv__checkbox--error"
-                        });
 
-    test.init();
+    let formsElem = document.querySelectorAll(".formYv");
+
+    if (formsElem !== undefined) {
+        formsElem.forEach(function(item){
+            let formObj = new Form(item, {
+                classInputContainer: "formYv__input",
+                classInputError: "formYv__input--error",
+                classInputFocus: "formYv__input--focus",
+                classInputNoEmety: "formYv__input--noEmety",
+                classTextareaContainer: "formYv__textarea",
+                classTextareaError: "formYv__textarea--error",
+                classTextareaFocus: "formYv__textarea--focus",
+                classTextareaNoEmety: "formYv__textarea--noEmety",
+                classCheckboxContainer: "formYv__checkbox",
+                classCheckboxError: "formYv__checkbox--error"
+            });
+            formObj.init();
+        });
+    }
+
+
 
 })();

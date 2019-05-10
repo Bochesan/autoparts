@@ -233,17 +233,30 @@
 
         _ajaxSand() {
             let ajax = new XMLHttpRequest(),
-                type = this._self.getAttribute("type") || "post",
-                action = this._self.getAttribute("action") || window.location.href;
+                form = this._self,
+                type = form.getAttribute("type") || "post",
+                action = form.getAttribute("action") || window.location.href;
 
                 console.log(type + " " + action);
 
             ajax.open(type, action);
 
             if (type.toLowerCase() === "post") {
+
+                ajax.addEventListener("progress", function() {
+                    console.log(ajax.response);
+                });
+                ajax.addEventListener("load", function() {
+                    let formContainer = form.closest(".formContainer");
+                    formContainer.classList.add("formContainer--done");
+                    //Todo: здесь надо поставить очистку формы
+                    setTimeout(function(){
+                        formContainer.classList.remove("formContainer--done");
+                    }, 3000);
+                });
+
                 let data = new FormData(this._self);
                 ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                console.log(data);
                 ajax.send(data);
             } else {
                 //Todo: здесь надо реализовать Get метод

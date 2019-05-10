@@ -1,3 +1,24 @@
+.formContainer
+    transition: 1s transform;
+    width: 200%;
+    display: flex;
+    transform: translateX(0%);
+    &__item
+        width: 50%;
+        &--done
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            // flex-direction: column;
+    &--done
+        transform: translateX(-50%);
+
+.formContainerItem__doneText
+    font-size: 1.5rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+
 .formYv {
     display: flex;
     /* flex-direction: column; */
@@ -53,6 +74,15 @@
 .formYv__submit {
     margin: 0 12px;
     margin-top: 1em;
+    padding: 0 10px;
+}
+
+.formYv__submit .button--red {
+    box-shadow: 0 5px 10px rgba(255,29,29,.5);
+}
+
+.formYv__submit .button--red:hover {
+    box-shadow: 0 5px 10px rgba(255,29,29,.5);
 }
 
 .formYv__label {

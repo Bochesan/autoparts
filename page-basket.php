@@ -265,68 +265,94 @@
         <div class="hr-slider-box">
             <div class="hr-slider">
                 <div class="hr-slider-slide is-active" data-index="1">
-                    <form class="formYv" type="post" action="test.json">
-                        <div class="formYv__input">
-                            <input type="text" data-valid="noEmety" name="name">
-                            <label class="formYv__label" for="">Ваше ФИО</label>
-                            <span class="formYv__error">Введите ФИО</span>
+                    <div class="formContainer">
+                        <div class="formContainer__item">
+                            <form class="formYv" type="post" action="test.json">
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="noEmety" name="name">
+                                    <label class="formYv__label" for="">Ваше ФИО</label>
+                                    <span class="formYv__error">Введите ФИО</span>
+                                </div>
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="email" name="email">
+                                    <label class="formYv__label" for="">Ваш e-mail</label>
+                                    <span class="formYv__error">Введите e-mail</span>
+                                </div>
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="phone" name="phone">
+                                    <label class="formYv__label" for="">Ваш телефон</label>
+                                    <span class="formYv__error">Введите телефон</span>
+                                </div>
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="noEmety" name="name">
+                                    <label class="formYv__label" for="">Адрес доставки</label>
+                                    <span class="formYv__error">Введите адрес</span>
+                                </div>
+                                <div class="formYv__checkbox">
+                                    <input id="checkbox1" name="checkbox" type="checkbox" data-valid="checked">
+                                    <label class="customCheckbox" for="checkbox1">
+                                        <span class="customCheckbox__body"></span>
+                                        <span class="customCheckbox__label">Я согласен на обработку персональных данных</span>
+                                    </label>
+                                </div>
+                                <div class="formYv__submit">
+                                    <input type="submit" class="delivery__form-button button button--red" name="" value="Оформить">
+                                </div>
+                            </form>
                         </div>
-                        <div class="formYv__input">
-                            <input type="text" data-valid="email" name="email">
-                            <label class="formYv__label" for="">Ваш e-mail</label>
-                            <span class="formYv__error">Введите e-mail</span>
+                        <div class="formContainer__item formContainer__item--done">
+                            <svg class="done" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z" stroke="#3da35a" fill="transparent"></path>
+                            </svg>
+                            <div class="formContainerItem__doneText">
+                                Спасибо за заказ!<br>
+                                Наш менеджер свяжется с вами
+                            </div>
                         </div>
-                        <div class="formYv__input">
-                            <input type="text" data-valid="phone" name="phone">
-                            <label class="formYv__label" for="">Ваш телефон</label>
-                            <span class="formYv__error">Введите телефон</span>
-                        </div>
-                        <div class="formYv__input">
-                            <input type="text" data-valid="noEmety" name="name">
-                            <label class="formYv__label" for="">Адрес доставки</label>
-                            <span class="formYv__error">Введите адрес</span>
-                        </div>
-                        <div class="formYv__checkbox">
-                            <input id="checkbox1" name="checkbox" type="checkbox" data-valid="checked">
-                            <label class="customCheckbox" for="checkbox1">
-                                <span class="customCheckbox__body"></span>
-                                <span class="customCheckbox__label">Я согласен на обработку персональных данных</span>
-                            </label>
-                        </div>
-                        <div class="formYv__submit">
-                            <input type="submit" class="delivery__form-button button button--red" name="" value="Оформить">
-                        </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="hr-slider-slide" data-index="2">
                     <div class="ya-map" id="map"></div>
-                    <form class="formYv" type="post" action="test.json">
-                        <div class="formYv__input">
-                            <input type="text" data-valid="noEmety" name="name">
-                            <label class="formYv__label" for="">Ваше ФИО</label>
-                            <span class="formYv__error">Введите ФИО</span>
+                    <div class="formContainer">
+                        <div class="formContainer__item">
+                            <form class="formYv" type="post" action="test.json">
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="noEmety" name="name">
+                                    <label class="formYv__label" for="">Ваше ФИО</label>
+                                    <span class="formYv__error">Введите ФИО</span>
+                                </div>
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="email" name="email">
+                                    <label class="formYv__label" for="">Ваш e-mail</label>
+                                    <span class="formYv__error">Введите e-mail</span>
+                                </div>
+                                <div class="formYv__input">
+                                    <input type="text" data-valid="phone" name="phone">
+                                    <label class="formYv__label" for="">Ваш телефон</label>
+                                    <span class="formYv__error">Введите телефон</span>
+                                </div>
+                                <div class="formYv__checkbox">
+                                    <input id="checkbox2" name="checkbox" type="checkbox" data-valid="checked">
+                                    <label class="customCheckbox" for="checkbox2">
+                                        <span class="customCheckbox__body"></span>
+                                        <span class="customCheckbox__label">Я согласен на обработку персональных данных</span>
+                                    </label>
+                                </div>
+                                <div class="formYv__submit">
+                                    <input type="submit" class="delivery__form-button button button--red" name="" value="Оформить">
+                                </div>
+                            </form>
                         </div>
-                        <div class="formYv__input">
-                            <input type="text" data-valid="email" name="email">
-                            <label class="formYv__label" for="">Ваш e-mail</label>
-                            <span class="formYv__error">Введите e-mail</span>
+                        <div class="formContainer__item formContainer__item--done">
+                            <svg class="done" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z" stroke="#3da35a" fill="transparent"></path>
+                            </svg>
+                            <div class="formContainerItem__doneText">
+                                Спасибо за заказ!<br>
+                                Наш менеджер свяжется с вами
+                            </div>
                         </div>
-                        <div class="formYv__input">
-                            <input type="text" data-valid="phone" name="phone">
-                            <label class="formYv__label" for="">Ваш телефон</label>
-                            <span class="formYv__error">Введите телефон</span>
-                        </div>
-                        <div class="formYv__checkbox">
-                            <input id="checkbox2" name="checkbox" type="checkbox" data-valid="checked">
-                            <label class="customCheckbox" for="checkbox2">
-                                <span class="customCheckbox__body"></span>
-                                <span class="customCheckbox__label">Я согласен на обработку персональных данных</span>
-                            </label>
-                        </div>
-                        <div class="formYv__submit">
-                            <input type="submit" class="delivery__form-button button button--red" name="" value="Оформить">
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

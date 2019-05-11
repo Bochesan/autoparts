@@ -3,6 +3,7 @@
     width: 200%;
     display: flex;
     transform: translateX(0%);
+    margin-bottom: 1.5rem;
     &__item
         width: 50%;
         &--done
@@ -12,12 +13,27 @@
             // flex-direction: column;
     &--done
         transform: translateX(-50%);
+    &--error
+        transform: translateX(-50%);
+        .formContainerItem__doneText
+            display: none;
+        .formContainerItem__errorText
+            display: flex;
 
 .formContainerItem__doneText
     font-size: 1.5rem;
     height: 15rem;
     display: flex;
     align-items: center;
+
+.formContainerItem__errorText
+    font-size: 1.5rem;
+    height: 15rem;
+    display: none;
+    align-items: center;
+    color: #d60505;
+
+
 
 .formYv {
     display: flex;
@@ -167,6 +183,7 @@
     height: 1em;
     border-radius: 50%;
     border: 1px solid black;
+    flex: none;
 }
 
 .customCheckbox__body:after {

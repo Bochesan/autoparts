@@ -237,22 +237,26 @@
                 type = form.getAttribute("type") || "post",
                 action = form.getAttribute("action") || window.location.href;
 
-                console.log(type + " " + action);
 
             ajax.open(type, action);
 
             if (type.toLowerCase() === "post") {
 
-                ajax.addEventListener("progress", function() {
-                    console.log(ajax.response);
-                });
                 ajax.addEventListener("load", function() {
                     let formContainer = form.closest(".formContainer");
-                    formContainer.classList.add("formContainer--done");
-                    //Todo: здесь надо поставить очистку формы
-                    setTimeout(function(){
-                        formContainer.classList.remove("formContainer--done");
-                    }, 3000);
+                    if (ajax.status === 200) {
+                        formContainer.classList.add("formContainer--done");
+                        setTimeout(function(){
+                            form.reset();
+                            formContainer.classList.remove("formContainer--done");
+                        }, 3000);
+                    } else {
+                        formContainer.classList.add("formContainer--error");
+                        setTimeout(function(){
+                            form.reset();
+                            formContainer.classList.remove("formContainer--error");
+                        }, 3000);
+                    }
                 });
 
                 let data = new FormData(this._self);
@@ -295,7 +299,6 @@
                 }
             });
 
-            console.log(self._validFormIndex);
 
             if (self._validFormIndex === true) {
                 // Функция отправки формы по ajax

@@ -308,11 +308,14 @@
                                 Спасибо за заказ!<br>
                                 Наш менеджер свяжется с вами
                             </div>
+                            <div class="formContainerItem__errorText">
+                                Неожиданная ошибка<br>
+                                Повторите попытку позднее
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="hr-slider-slide" data-index="2">
-                    <div class="ya-map" id="map"></div>
                     <div class="formContainer">
                         <div class="formContainer__item">
                             <form class="formYv" type="post" action="test.json">
@@ -351,8 +354,13 @@
                                 Спасибо за заказ!<br>
                                 Наш менеджер свяжется с вами
                             </div>
+                            <div class="formContainerItem__errorText">
+                                Неожиданная ошибка<br>
+                                Повторите попытку позднее
+                            </div>
                         </div>
                     </div>
+                    <div class="ya-map" id="map"></div>
                 </div>
             </div>
         </div>

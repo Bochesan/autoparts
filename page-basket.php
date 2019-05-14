@@ -255,17 +255,30 @@
 </div>
 
 <div class="delivery">
-    <div class="delivery__title">Выберите способ доставки</div>
+    <div class="delivery__title">Выберите способ получения</div>
     <div class="delivery__tabs hr-sect">
         <div class="hr-pagination">
             <div class="hr-pagination__step button-no-active button is-active" data-index="1">Доставка</div>
             <div class="hr-pagination__step button-no-active" data-index="2">Самовывоз</div>
         </div>
         <div class="delivery__price">Итого: <span class="delivery__price-num">28 080</span> р</div>
-        <div class="delivery__price delivery__price--min">В цену включена стоимость доставки: <span class="delivery__delivery-num">600</span> р</div>
         <div class="hr-slider-box">
             <div class="hr-slider">
                 <div class="hr-slider-slide is-active" data-index="1">
+                    <div class="delivery__price delivery__price--min">
+                        <p class="delivery__priceTitle">
+                            Важная информация для доставки!
+                        </p>
+                        <p>
+                            • Оплата только наличными
+                        </p>
+                        <p>
+                            • В итоговую сумму не включена стоимость доставки. Точную стоимость доставки Вам сообщит менеджер после заказа
+                        </p>
+                        <p>
+                            • Стоимость доставки может быть от 100 до 400 рублей в зависимости от удаленности от г. Звенигорода
+                        </p>
+                    </div>
                     <div class="formContainer">
                         <div class="formContainer__item">
                             <form class="formYv" type="post" action="test.json">
@@ -317,6 +330,17 @@
                     </div>
                 </div>
                 <div class="hr-slider-slide" data-index="2">
+                    <div class="delivery__price delivery__price--min">
+                        <p class="delivery__priceTitle">
+                            Важная информация для самовывоза!
+                        </p>
+                        <p>
+                            • Оплата наличными и картой
+                        </p>
+                        <p>
+                            • Пункт выдачи работает ежедневно с 8:00 - 20:00
+                        </p>
+                    </div>
                     <div class="formContainer">
                         <div class="formContainer__item">
                             <form class="formYv" type="post" action="test.json">

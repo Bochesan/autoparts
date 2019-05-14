@@ -88,8 +88,6 @@
         _addClassFilter(item) {
             let parent = item.closest(".catalog-filter__col");
 
-            console.log(item);
-
             item.classList.add(this._activeClass);
             item.classList.add(this._sortTypeAsc.class);
 
@@ -193,6 +191,18 @@
                 page = Number(page) + 1;
 
                 moreButton.setAttribute("data-page", page);
+        }
+
+        moreToggle(endMoreIndex) {
+            let moreButton = this._containerMore.querySelectorAll(".catalog__more-button")[0];
+
+            console.log(endMoreIndex);
+
+            if (endMoreIndex) {
+                moreButton.classList.add("button--hidden");
+            } else {
+                moreButton.classList.remove("button--hidden");
+            }
         }
 
         updateStateFilterFromUrl(arrayResult) {
@@ -358,22 +368,6 @@
             catalodTest.playPreloader();
         }
 
-        _complete() {
-            let result = JSON.parse(this.response);
-
-            if (productUpdate === true) {
-                catalodTest.updateTitle(result.title);
-                catalodTest.updateListProducts(result.elements);
-            } else {
-                catalodTest.addProducts(result.elements);
-            }
-
-            catalodTest.stopPreloader();
-
-            console.log(result);
-
-        }
-
         _completeUpdatePrpoducts() {
             let result = JSON.parse(this.response);
 
@@ -387,6 +381,8 @@
 
         _completeAddProducts() {
             let result = JSON.parse(this.response);
+
+            filter.moreToggle(result.end);
 
             catalodTest.addProducts(result.elements);
 

@@ -184,7 +184,7 @@
             </div>
         </div>
         <div class="catalog__more">
-            <a href="#" class="catalog__more-button button button--red">Еще</a>
+            <a href="#" class="catalog__more-button button button--red" data-page="1">Еще</a>
         </div>
     </div>
 </div>

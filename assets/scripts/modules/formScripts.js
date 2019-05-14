@@ -105,7 +105,7 @@
         _validationEmail(inputTag) {
             let patternEmail = /^[0-9a-z]([\.-]?\w+)*@[0-9a-z]([\.-]?[0-9a-z])*(\.[0-9a-z]{2,4})+$/;
 
-            if (inputTag.value.search(patternEmail) === 0) {
+            if (inputTag.value.toLowerCase().search(patternEmail) === 0) {
                 return true; // test
             }
 

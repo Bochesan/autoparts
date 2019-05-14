@@ -127,6 +127,7 @@
             //Метод формирования get запроса
             let arrayQuery = [],
                 searchItem = this.searchItem.getElementsByTagName("input")[0],
+                pageString,
                 brand,
                 getQuery;
 
@@ -149,6 +150,13 @@
                 arrayQuery.push("search=" + searchItem.value);
             }
 
+            if (productUpdate) {
+                this._moreReset();
+                // arrayQuery.push("page=" + this._containerMore.querySelectorAll(".catalog__more-button")[0].getAttribute("data-page"));
+            }
+
+            pageString = "page=" + this._containerMore.querySelectorAll(".catalog__more-button")[0].getAttribute("data-page")
+
             getQuery = "?" + arrayQuery.join("&");
 
             getQuery = encodeURI(getQuery);
@@ -157,7 +165,7 @@
 
             //Todo: здесь надо будет сделать актуальный урл для ajax запросов
             // Пример: let ajaxConnect = new AjaxGetProducts(window.location.href + getQuery, "get", true);
-            let ajaxConnect = new AjaxGetProducts("test.json", "get", productUpdate);
+            let ajaxConnect = new AjaxGetProducts("test.json" + getQuery + "&" + pageString, "get", productUpdate);
 
             if (delay === undefined){
                 ajaxConnect.send();
@@ -170,6 +178,21 @@
 
             console.log(getQuery);
 
+        }
+
+        _moreReset() {
+            let moreButton = this._containerMore.querySelectorAll(".catalog__more-button")[0];
+
+            moreButton.setAttribute("data-page", "1");
+        }
+
+        _morePage() {
+            let moreButton = this._containerMore.querySelectorAll(".catalog__more-button")[0],
+                page = moreButton.getAttribute("data-page");
+
+                page = Number(page) + 1;
+
+                moreButton.setAttribute("data-page", page);
         }
 
         updateStateFilterFromUrl(arrayResult) {
@@ -256,6 +279,7 @@
 
             this._containerMore.querySelectorAll(".catalog__more-button")[0].addEventListener("click", function(event) {
                 event.preventDefault();
+                self._morePage();
                 self._queryFormation(false);
             });
         }
@@ -333,7 +357,7 @@
         _progress() {
             catalodTest.playPreloader();
         }
-
+ 
         _complete() {
             let result = JSON.parse(this.response);
 

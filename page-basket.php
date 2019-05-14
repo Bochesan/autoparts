@@ -261,7 +261,8 @@
             <div class="hr-pagination__step button-no-active button is-active" data-index="1">Доставка</div>
             <div class="hr-pagination__step button-no-active" data-index="2">Самовывоз</div>
         </div>
-        <div class="delivery__price">Итого: <span class="delivery__price-num">28 080</span>,00 р</div>
+        <div class="delivery__price">Итого: <span class="delivery__price-num">28 080</span> р</div>
+        <div class="delivery__price delivery__price--min">В цену включена стоимость доставки: <span class="delivery__delivery-num">600</span> р</div>
         <div class="hr-slider-box">
             <div class="hr-slider">
                 <div class="hr-slider-slide is-active" data-index="1">

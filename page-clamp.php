@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    <div class="catalog__title double-text" data-name="Shell">Shell</div>
+    <h2 class="catalog__title double-text" data-name="Shell">Shell</h2>
 
     <div class="catalog__filter">
         <div class="catalog-filter">
@@ -88,7 +88,7 @@
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
-                    <div class="product-row__prise">2 080,00 р</div>
+                    <div class="product-row__prise">2 080 р</div>
                     <div class="product-row__buttons">
                         <a class="product-row__button button button--basket button--red">
                             <span class="button__text">В корзину</span>
@@ -139,7 +139,7 @@
                         </div>
                         <div class="product-row__title-name">Helix HX8 A5/B5 5/30</div>
                     </div>
-                    <div class="product-row__prise">2 080,00 р</div>
+                    <div class="product-row__prise">2 080 р</div>
                     <div class="product-row__buttons">
                         <a class="product-row__button button button--basket button--red">
                             <span class="button__text">В корзину</span>

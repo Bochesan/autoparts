@@ -321,7 +321,7 @@
 
                     //Todo: здесь надо будет сделать актуальный урл для ajax запросов
                     // Пример: let ajaxConnect = new AjaxGetProducts(url, "get", true);
-                    let ajaxConnect = new AjaxGetProducts("test.json", "get", true);
+                    let ajaxConnect = new AjaxGetProducts("test.json" + "?" + arrayGet + "&page=1", "get", true);
                     ajaxConnect.send();
 
                 } else {
@@ -357,7 +357,7 @@
         _progress() {
             catalodTest.playPreloader();
         }
- 
+
         _complete() {
             let result = JSON.parse(this.response);
 

@@ -97,7 +97,7 @@
                                 <path d="M3 16L12 25L34 3" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a class="product-row__button button button--white">Купить в 1 клик</a>
+                        <a class="product-row__button button button--white button--buy">Купить в 1 клик</a>
                     </div>
                 </div>
                 <div class="slide-info">
@@ -148,7 +148,7 @@
                                 <path d="M3 16L12 25L34 3" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a class="product-row__button button button--white">Купить в 1 клик</a>
+                        <a class="product-row__button button button--white button--buy">Купить в 1 клик</a>
                     </div>
                 </div>
                 <div class="slide-info">

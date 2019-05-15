@@ -50,6 +50,31 @@
 </footer>
 </div>
 
+<div class="i-popup">
+    <div class="i-popup__overlay"></div>
+    <div class="i-popup__container">
+
+      <div class="i-popup__box">
+        <div class="i-popup__box-content i-popup__box-content--form">
+          <div class="i-popup__box-content-inner">
+            <div class="i-popup__box-title">Хотите получить хранение<br>
+  <b>9 рублей за паллет-место</b> в сутки<br> только до конца месяца?</div>
+            <form class="i-popup__form" action="">
+              <input class="i-popup__input input-val" type="text" placeholder="Имя">
+              <input class="i-popup__input input-val" type="email" placeholder="E-mail">
+              <input class="i-popup__submit" type="submit" value="Получить">
+              <button class="i-popup__button">Спасибо, мне не интересно</button>
+            </form>
+          </div>
+        </div>
+        <div class="i-popup__box-picture">
+          <img src="/media/images/oil.png" alt="" class="i-popup__box-image">
+        </div>
+      </div>
+
+    </div>
+</div>
+
 <script src="/assets/scripts/jquery-3.3.1.min.js"></script>
 <script src="/assets/scripts/textMaskCore.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

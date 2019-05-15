@@ -320,7 +320,7 @@
                             </svg>
                             <div class="formContainerItem__doneText">
                                 Спасибо за заказ!<br>
-                                Наш менеджер свяжется с вами
+                                Наш менеджер свяжется с Вами
                             </div>
                             <div class="formContainerItem__errorText">
                                 Неожиданная ошибка<br>
@@ -377,7 +377,7 @@
                             </svg>
                             <div class="formContainerItem__doneText">
                                 Спасибо за заказ!<br>
-                                Наш менеджер свяжется с вами
+                                Наш менеджер свяжется с Вами
                             </div>
                             <div class="formContainerItem__errorText">
                                 Неожиданная ошибка<br>

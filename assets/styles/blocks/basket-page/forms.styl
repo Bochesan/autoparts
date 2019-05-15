@@ -10,7 +10,20 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            // flex-direction: column;
+
+        &--onClick
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .formContainerItem__doneText
+                height: 6rem;
+                text-align: center;
+            .formContainerItem__errorText
+                height: 6rem;
+                text-align: center;
+            .done
+                height: 6rem;
+                width: 6rem;
     &--done
         transform: translateX(-50%);
     &--error
@@ -49,6 +62,10 @@
     width: calc(50% - 24px);
     margin: 1.2em 12px;
     // margin-top: 2.5em;
+}
+
+.formYv__input--onClick {
+    width: calc(100% - 24px);
 }
 
 .formYv__input input {

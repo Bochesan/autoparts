@@ -10,6 +10,9 @@
                 document.getElementById('itemName').value = nameItem;
                 document.getElementById('itemPrice').value = priceItem;
 
+            var src = $(this).closest(".product-row__content").find(".product-row__title-image a").attr("href");
+
+            $(".i-popup__box-image").attr("src", src);
         });
 
         // Popup closed

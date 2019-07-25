@@ -1,7 +1,6 @@
 ;(function() {
 
-    window.addEventListener('load', function() {
-
+    function hoverRoller() {
         if ($('.catalog-nav__controls').length) {
 
             var menuLink = $('.catalog-nav__controls-link'),
@@ -49,7 +48,16 @@
             });
             resizePos();
         }
+    }
+
+    window.addEventListener('load', function() {
+
+        //Временно закоментил эффект
+        hoverRoller();
+
     });
+
+    window.hoverRoller = hoverRoller;
 
 
 })();

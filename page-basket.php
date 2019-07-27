@@ -428,5 +428,7 @@
 
         }
     </script>
-
+    <div class="buttonCart">
+        <span class="button button--red buttonCart__button">Оформить</span>
+    </div>
 <? require $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

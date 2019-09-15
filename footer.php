@@ -53,7 +53,9 @@
 <div class="i-popup">
     <div class="i-popup__overlay"></div>
     <div class="i-popup__container">
-
+        <div class="i-popup__closeElement">
+            +
+        </div>
       <div class="i-popup__box">
         <div class="i-popup__box-content i-popup__box-content--form">
           <div class="i-popup__box-content-inner">

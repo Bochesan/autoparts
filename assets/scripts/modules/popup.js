@@ -20,6 +20,9 @@
           event.preventDefault();
           $('.i-popup').removeClass('opened');
         });
+        $(document).on("click", ".i-popup__closeElement", function(event) {
+          $('.i-popup').removeClass('opened');
+        });
     });
 
 })();

@@ -10,9 +10,16 @@
             flex-direction: column;
             justify-content: space-between;
 
+        +below(1024px)
+            height: calc(50vh - 8.25rem);
+
+
         +below(680px)
             min-height: initial;
-            height: calc(100vh - 11rem);
+            height: calc(81vh - 11rem);
+
+        +below(400px)
+            height: calc(65vh - 11rem);
 
     &__parallax
         position: absolute;
